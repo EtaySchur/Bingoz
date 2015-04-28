@@ -1,5 +1,5 @@
 angular.module('starter.controllers', [])
-.controller('MainController', function($scope , $rootScope , $firebaseArray , $cordovaFacebook) {
+.controller('MainController', function($scope , $rootScope , $firebaseArray , $cordovaFacebook,$timeout) {
         console.log("MAIN CONTROLER");
         var ref = new Firebase("https://bingoz.firebaseio.com/players");
         $rootScope.players = $firebaseArray(ref);
@@ -10,6 +10,14 @@ angular.module('starter.controllers', [])
             var d = new Date(timestamp);
             return d.toLocaleDateString();
         };
+
+            $timeout(function(){
+                               window.plugins.OneSignal.init("3b17d8f2-ede5-11e4-bd44-df53b0e80d36",
+                               {googleProjectNumber: "857924958148"});
+        
+            },1000);
+
+
         /*
         $cordovaFacebook.getLoginStatus()
             .then(function(success) {
