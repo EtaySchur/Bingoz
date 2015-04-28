@@ -1,0 +1,70 @@
+<ion-view view-title="Games">
+  <ion-content>
+      <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-left item-icon-right" ng-repeat="game in games" type="item-text-wrap" href="#/tab/games/{{game.$id}}">
+          <i ng-hide="showJoinGameButton(game)" class="icon icon-accessory fa fa-check"></i>
+          <div class="row">
+              <div class="col col-75">
+                  <h2>{{game.location}}</h2>
+                  <p>{{convertTimeStampToDate(game.date)}}</p>
+              </div>
+              <div class="col">{{checkMe(game)}}/{{game.maxPlayers}}
+                  <i class="fa fa-users"></i>
+              </div>
+          </div>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+
+          <ion-option-button  ng-click="game.$remove(game)" class="button-assertive" ng-click="remove(chat)">
+              <i style="padding-left: 15px;padding-right: 15px"     class="fa fa-trash-o fa-2x"></i>
+          </ion-option-button>
+          <ion-option-button  ng-click="addMe(game)"  ng-show="showJoinGameButton(game)" ng-click="game.$remove(game)" class="button-positive">
+              <i      style="padding-left: 15px;padding-right: 15px"   class="fa fa-plus-circle fa-2x"></i>
+          </ion-option-button>
+          <ion-option-button ng-click="removeMe(game)"   ng-hide="showJoinGameButton(game)" ng-click="game.$remove(game)" class="button-positive">
+              <i     style="padding-left: 15px;padding-right: 15px" class="fa fa-minus-circle fa-2x"></i>
+          </ion-option-button>
+      </ion-item>
+   </ion-list>
+  </ion-content>
+    <ion-footer-bar align-title="left" class="bar-assertive">
+
+        <h1 ng-click="openModal()" class="title">Add Bingo Game </h1>
+
+    </ion-footer-bar>
+</ion-view>
+<script id="my-modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Add Bingo Game</h1>
+            <button ng-click="closeModal()" class="button" ng-click="openModal($event)">
+                <i  class="ion-chevron-right icon ion-close-round"></i>
+            </button>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+
+                    <input  type="text" ng-change="updateLocation(location)" ng-model="location">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input   ng-click="pickDate()" readonly type="date" ng-model="newGame.date">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input readonly ng-click="pickTime()"  type="time" ng-model="newGame.time">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input ng-change="updateMaxPlayers(maxPlayers)" type="text" ng-model="maxPlayers" placeholder="Enter Max Number Of Players">
+                </label>
+            </div>
+        </ion-content>
+        <ion-footer-bar align-title="left" class="bar-assertive">
+
+            <h1 ng-click="addNewGame()" class="title">Add Bingo Game </h1>
+
+        </ion-footer-bar>
+    </ion-modal-view>
+</script>
