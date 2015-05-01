@@ -1,0 +1,28 @@
+{
+    "version": "1.5.0",
+    "name": "com.onesignal.plugins.onesignal",
+    "cordova_name": "OneSignal Push Notifications",
+    "description": "\n\t\tOneSignal is a high volume Push Notification service for mobile apps. In addition to basic notification delivery, OneSignal also provides tools to localize, target, schedule, and automate notifications that you send.\n\t",
+    "license": "MIT",
+    "keywords": [
+        "push",
+        "notification",
+        "push notification",
+        "push notifications",
+        "apns",
+        "gcm",
+        "adm",
+        "retention",
+        "messaging"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.3.0"
+        }
+    ]
+}

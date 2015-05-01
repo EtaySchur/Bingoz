@@ -1,0 +1,32 @@
+{
+    "com.onesignal.plugins.OneSignal": {
+        "source": {
+            "type": "registry",
+            "id": "com.onesignal.plugins.onesignal"
+        }
+    },
+    "android.support.v4": {
+        "source": {
+            "type": "registry",
+            "id": "android.support.v4"
+        }
+    },
+    "com.google.playservices": {
+        "source": {
+            "type": "registry",
+            "id": "com.google.playservices"
+        }
+    },
+    "org.apache.cordova.camera": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.camera"
+        }
+    },
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.device"
+        }
+    }
+}
