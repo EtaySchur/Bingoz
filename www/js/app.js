@@ -5,20 +5,30 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services' , 'firebase' , 'ngCordova' ])
+angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'starter.services' , 'firebase' , 'ngCordova' ])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $localstorage, $location) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if (window.StatusBar) {
+  if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+    cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+  }
+  if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
     }
   });
+  console.log($localstorage);
+
+  $rootScope.ref = new Firebase("https://bingoz.firebaseio.com/");
+  var user = $rootScope.ref.getAuth();
+  $rootScope.ref.unauth();
+  if(user && user !== "null" && user !== "undefined"){
+  $location.path('/tab/dash');    
+  }
+
+
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -28,29 +38,37 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services' , 
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: "/tab",
     abstract: true,
     templateUrl: "templates/tabs.html"
   })
 
-      .state('tab.settings', {
-          url: "/settings",
-          views: {
-              'tab-settings': {
-                  templateUrl: "templates/tab-settings.html",
-                  controller: 'SettingsCtrl'
-              }
-          }
-
-
-      })
-
-
-
   // Each tab has its own nav history stack:
+  .state('signin', {
+    url: '/sign-in',
+    templateUrl: 'templates/sign-in.html',
+    controller: 'SignInCtrl'
+  })
+
+  .state('signup', {
+    url: '/sign-up',
+    templateUrl: 'templates/sign-up.html',
+    controller: 'SignUpCtrl'
+  })
+
+  .state('tab.settings', {
+    url: "/settings",
+    views: {
+      'tab-settings': {
+        templateUrl: "templates/tab-settings.html",
+        controller: 'SettingsCtrl'
+      }
+    }
+
+
+  })
 
   .state('tab.dash', {
     url: '/dash',
@@ -63,32 +81,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services' , 
   })
 
   .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
+    url: '/chats',
+    views: {
+      'tab-chats': {
+        templateUrl: 'templates/tab-chats.html',
+        controller: 'ChatsCtrl'
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
+    }
+  })
+  .state('tab.chat-detail', {
+    url: '/chats/:chatId',
+    views: {
+      'tab-chats': {
+        templateUrl: 'templates/chat-detail.html',
+        controller: 'ChatDetailCtrl'
       }
-    })
-      .state('tab.game-detail', {
-          url: '/games/:gameId',
-          views: {
-              'tab-account': {
-                  templateUrl: 'templates/game-detail.html',
-                  controller: 'GameDetailCtrl'
-              }
-          }
-      })
+    }
+  })
+  .state('tab.game-detail', {
+    url: '/games/:gameId',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/game-detail.html',
+        controller: 'GameDetailCtrl'
+      }
+    }
+  })
 
   .state('tab.games', {
     url: '/games',
@@ -101,6 +119,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services' , 
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/sign-up');
 
 });
