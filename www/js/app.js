@@ -19,6 +19,7 @@ angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'start
       StatusBar.styleLightContent();
     }
   });
+  // $rootScope.notificationToken = window.plugins.OneSignal.init("3b17d8f2-ede5-11e4-bd44-df53b0e80d36",{googleProjectNumber: "857924958148"});
   console.log($localstorage);
 
   $rootScope.ref = new Firebase("https://bingoz.firebaseio.com/");

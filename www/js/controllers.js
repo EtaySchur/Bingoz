@@ -1,13 +1,38 @@
 		angular.module('starter.controllers', [])
 
-		.controller('SignUpCtrl',function ($scope) {
-			console.log("signup");
-			$scope.signUp = function(user){
-				console.log(user);
+		.controller('SignInCtrl',function ($scope) {
+			$scope.signIn = function(user){
+				$root.showSpinner = true;
+				ref.authWithPassword({
+					email    : user.email,
+					password : user.password
+				}, function(error, authData){
+					$root.showSpinner = false;
+					if (error) {
+						console.log("Login Failed!", error);
+					} else {
+						$location.path('/tab/dash');
+						$rootScope.$digest();
+					}
+				});
 			}
 		})
 
-		.controller('SignUpCtrl', function($scope,$rootScope, $localstorage, $state, $location){
+		.controller('SignUpCtrl', function($scope,$rootScope, $localstorage, $state, $location,$timeout){
+			var userNotificationId, userNotificationToken;
+			document.addEventListener("deviceready", function() {
+				$timeout(function(){
+				window.plugins.OneSignal.init("3b17d8f2-ede5-11e4-bd44-df53b0e80d36",{googleProjectNumber: "857924958148", autoRegister: true});
+				window.plugins.OneSignal.getIds(function(ids) {
+					userNotificationId = ids.userId;
+					userNotificationToken =  ids.pushToken;
+				});
+				},300)
+				    // // retrieve the DOM element that had the ng-app attribute
+				    // var domElement = document.getElementById(...) / document.querySelector(...);
+				    // angular.bootstrap(domElement, ["angularAppName"]);
+			}, false);
+
 			var players = new Firebase("https://bingoz.firebaseio.com/players");
 			$scope.creatAccount = function(user){
 				$rootScope.showSpinner = true;
@@ -26,7 +51,9 @@
 							firstName: user.firstName,
 							lastName: user.lastName,
 							fullName: user.firstName+" "+user.lastName,
-							nickName: user.nickName
+							nickName: user.nickName || user.email.replace(/@.*/, ''),
+							userNotificationId: userNotificationId || "error to get userNotificationId",
+							userNotificationToken: userNotificationToken || "error to get userNotificationToken"
 						},function(error){
 							if(error){
 
@@ -47,12 +74,12 @@
 								});
 
 							}
-						});								
+						});
 					}
 
 				});
-			}
-		})
+	}
+})
 
 		.controller('MainController', function($scope , $rootScope , $firebaseArray , $cordovaFacebook, $ionicPlatform) {
 			console.log("MAIN CONTROLER");
@@ -69,9 +96,7 @@
 				// $timeout(function(){
 
 				// },1000);
-		$ionicPlatform.ready(function() {
-			window.plugins.OneSignal.init("3b17d8f2-ede5-11e4-bd44-df53b0e80d36",{googleProjectNumber: "857924958148"});
-		});
+
 
 
 
