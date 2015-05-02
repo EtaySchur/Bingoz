@@ -20,12 +20,13 @@ angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'start
     }
   });
   // $rootScope.notificationToken = window.plugins.OneSignal.init("3b17d8f2-ede5-11e4-bd44-df53b0e80d36",{googleProjectNumber: "857924958148"});
-  console.log($localstorage);
 
   $rootScope.ref = new Firebase("https://bingoz.firebaseio.com/");
-  var user = $rootScope.ref.getAuth();
-  $rootScope.ref.unauth();
-  if(user && user !== "null" && user !== "undefined"){
+  $rootScope.currentUser = $rootScope.ref.getAuth();
+  //to log out uncomment this line
+  // $rootScope.ref.unauth();
+  console.log($rootScope.currentUser);
+  if($rootScope.currentUser && $rootScope.currentUser !== "null" && $rootScope.currentUser !== "undefined"){
       $location.path('/tab/dash');    
   }
 
