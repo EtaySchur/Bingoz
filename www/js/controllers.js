@@ -45,8 +45,6 @@
 						$rootScope.$digest();
 						console.log("Error creating user:", error);
 					} else {
-						console.log(userData);
-						console.log(user);
 						players.child(userData.uid).set({
 							firstName: user.firstName,
 							lastName: user.lastName,
@@ -67,6 +65,7 @@
 									if (error) {
 										console.log("Login Failed!", error);
 									} else {
+										$rootScope.currentUser = authData;
 										$location.path('/tab/dash'); 
 										$rootScope.$digest();
 
@@ -161,7 +160,10 @@
 
 
 
-		.controller('DashCtrl', function($scope) {})
+		.controller('DashCtrl', function($scope, $rootScope) {
+			console.log($rootScope.currentUser);
+
+		})
 
 		.controller('SettingsCtrl', function($rootScope , $scope ,$cordovaCamera , $cordovaImagePicker  ) {
 

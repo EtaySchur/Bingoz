@@ -21,13 +21,11 @@
 		.controller('SignUpCtrl', function($scope,$rootScope, $localstorage, $state, $location,$timeout){
 			var userNotificationId, userNotificationToken;
 			document.addEventListener("deviceready", function() {
-				alert("ready");
 				$timeout(function(){
-				window.plugins.OneSignal.init("3b17d8f2-ede5-11e4-bd44-df53b0e80d36",{googleProjectNumber: "857924958148", autoRegister: true});
+				window.plugins.OneSignal.init("b725d95c-edd7-11e4-af24-97858152d332",{googleProjectNumber: "857924958148" , autoRegister: true});
 				window.plugins.OneSignal.getIds(function(ids) {
 					userNotificationId = ids.userId;
 					userNotificationToken =  ids.pushToken;
-					alert('getIds: ' + JSON.stringify(ids));
 				});
 				},300)
 				    // // retrieve the DOM element that had the ng-app attribute
