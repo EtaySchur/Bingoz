@@ -366,12 +366,14 @@
 			$scope.addNewGame = function (){
 				console.log("adding new game");
 				console.log($scope.newGame);
+                console.log($rootScope.currentUser);
 				$scope.games.$add({
 					location: $scope.newGame.location,
 					date:($scope.newGame.date).getTime(),
-					createdBy:$rootScope.currentPlayer.$id,
+					createdBy:$rootScope.currentUser.uid,
 					maxPlayers:$scope.newGame.maxPlayers,
-					time:($scope.newGame.time).getTime()
+					time:($scope.newGame.time).getTime(),
+                    players:[$rootScope.currentUser.uid]
 				});
 				$scope.modal.hide();
 			}
