@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a17fcc-b4fd-435e-9cac-7600af50207a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Bingoz/Bingoz-Info.plist" afterPath="$PROJECT_DIR$/platforms/ios/Bingoz/Bingoz-Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/controllers.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/sign-up.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/sign-up.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/css/style.css" afterPath="$PROJECT_DIR$/platforms/ios/www/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/tab-games.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/tab-games.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/tab-settings.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/tab-settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tab-settings.html" afterPath="$PROJECT_DIR$/www/templates/tab-settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/tabs.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/tabs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/services.js" afterPath="$PROJECT_DIR$/www/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tab-games.html" afterPath="$PROJECT_DIR$/www/templates/tab-games.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FireBase.iws" />
@@ -41,7 +31,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
+            <state line="134" column="25" selection-start="3658" selection-end="3658" vertical-scroll-proportion="0.0" vertical-offset="1477" max-vertical-offset="2355">
               <folding />
             </state>
           </provider>
@@ -86,16 +76,16 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="0" selection-start="5470" selection-end="5470" vertical-scroll-proportion="-14.0" vertical-offset="2561" max-vertical-offset="6840">
+            <state line="356" column="13" selection-start="8853" selection-end="8853" vertical-scroll-proportion="-9.5" vertical-offset="5093" max-vertical-offset="7125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab-settings.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tab-settings.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="42" selection-start="1400" selection-end="1400" vertical-scroll-proportion="1.1857708" vertical-offset="0" max-vertical-offset="855">
+            <state line="14" column="48" selection-start="644" selection-end="667" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="855">
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
               </folding>
@@ -106,16 +96,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="608" selection-end="608" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="915">
+            <state line="24" column="105" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="9" selection-start="1214" selection-end="1359" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1155">
+            <state line="13" column="39" selection-start="559" selection-end="559" vertical-scroll-proportion="0.35911602" vertical-offset="0" max-vertical-offset="1635">
               <folding />
             </state>
           </provider>
@@ -144,17 +134,17 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/www/templates/tab-account.html" />
-        <option value="$PROJECT_DIR$/www/js/services.js" />
         <option value="$PROJECT_DIR$/www/templates/tabs.html" />
         <option value="$PROJECT_DIR$/www/templates/game-detail.html" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/plugins/ios.json" />
         <option value="$PROJECT_DIR$/ionic.project" />
-        <option value="$PROJECT_DIR$/www/templates/tab-games.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers.js" />
         <option value="$PROJECT_DIR$/www/templates/tab-settings.html" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/www/templates/tab-games.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/www/js/services.js" />
       </list>
     </option>
   </component>
@@ -340,7 +330,15 @@
       <created>1430583234561</created>
       <updated>1430583234561</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add current player feature">
+      <created>1430585810816</created>
+      <updated>1430585810816</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add current player feature">
+      <created>1430590271277</created>
+      <updated>1430590271277</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -385,7 +383,8 @@
     <MESSAGE value="Add ios Support" />
     <MESSAGE value="Add ios Build" />
     <MESSAGE value="change current player" />
-    <option name="LAST_COMMIT_MESSAGE" value="change current player" />
+    <MESSAGE value="add current player feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add current player feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -427,7 +426,7 @@
         <state line="38" column="44" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1125">
           <folding>
             <element signature="n#style#0;n#i#0;n#ion-option-button#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#i#0;n#ion-option-button#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#ion-option-button#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#ion-option-button#2;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -506,7 +505,7 @@
         <state line="39" column="21" selection-start="1936" selection-end="1936" vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="1095">
           <folding>
             <element signature="n#style#0;n#i#0;n#ion-option-button#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#i#0;n#ion-option-button#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#ion-option-button#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#ion-option-button#2;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -569,7 +568,7 @@
         <state line="8" column="25" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="855">
           <folding>
             <element signature="n#style#0;n#i#0;n#ion-option-button#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#i#0;n#ion-option-button#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#ion-option-button#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#ion-option-button#2;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
           </folding>
         </state>
@@ -635,13 +634,6 @@
         <state line="6" column="0" selection-start="282" selection-end="488" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="300" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="9" selection-start="1214" selection-end="1359" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/ios.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="101" column="38" selection-start="3602" selection-end="3602" vertical-scroll-proportion="-11.75" vertical-offset="1233" max-vertical-offset="1770">
@@ -663,41 +655,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/game-detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="17" selection-start="358" selection-end="491" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-games.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="24" selection-start="2657" selection-end="2657" vertical-scroll-proportion="-9.666667" vertical-offset="548" max-vertical-offset="1125">
-          <folding>
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="608" selection-end="608" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
@@ -716,26 +676,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="48" selection-start="644" selection-end="667" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="855">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="105" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
+        <state line="134" column="25" selection-start="3658" selection-end="3658" vertical-scroll-proportion="0.0" vertical-offset="1477" max-vertical-offset="2355">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-games.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="39" selection-start="3245" selection-end="3245" vertical-scroll-proportion="-12.875" vertical-offset="606" max-vertical-offset="1350">
+          <folding>
+            <element signature="n#style#0;n#i#0;n#ion-option-button#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1430593546000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="0" selection-start="5470" selection-end="5470" vertical-scroll-proportion="-14.0" vertical-offset="2561" max-vertical-offset="6840">
+        <state line="356" column="13" selection-start="8853" selection-end="8853" vertical-scroll-proportion="-9.5" vertical-offset="5093" max-vertical-offset="7125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
+    <entry file="file://$PROJECT_DIR$/www/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="42" selection-start="1400" selection-end="1400" vertical-scroll-proportion="1.1857708" vertical-offset="0" max-vertical-offset="855">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="13" column="39" selection-start="559" selection-end="559" vertical-scroll-proportion="0.35911602" vertical-offset="0" max-vertical-offset="1635">
+          <folding />
         </state>
       </provider>
     </entry>

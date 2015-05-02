@@ -1,5 +1,37 @@
 angular.module('starter.services', [])
+    .factory('Notifications', function($firebaseArray , $http) {
+        var appId = "b725d95c-edd7-11e4-af24-97858152d332";
 
+        return {
+            sendNewGameNotification:function(newGame , invitedPlayersIds , createdByUser){
+
+                var data = {
+                    "app_id": appId,
+                    "include_player_ids":invitedPlayersIds,
+                    "isAndroid":true,
+                    "isIos":true,
+                    "ios_badgeType":"Increase",
+                    "ios_badgeCount":1,
+                    "contents": {"en": createdByUser.nickName+' Has Created New Game , Hurry Up And Join The Game !'}
+                }
+
+                $http.post('https://onesignal.com/api/v1/notifications',data).
+                    success(function(data, status, headers, config) {
+                        // this callback will be called asynchronously
+                        // when the response is available
+                        console.log("Success");
+                        console.log(data);
+                        console.log(status);
+                    }).
+                    error(function(data, status, headers, config) {
+                        // called asynchronously if an error occurs
+                        // or server returns response with an error status.
+                    });
+            }
+        };
+
+
+    })
 .factory('Chats', function($firebaseArray) {
   // Might use a resource here that returns a JSON array
 

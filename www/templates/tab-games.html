@@ -45,11 +45,11 @@
                 <label class="item item-input">
                     <i class="icon ion-search placeholder-icon"></i>
 
-                    <input  type="text" ng-change="updateLocation(location)" ng-model="location">
+                    <input  type="text" ng-change="updateLocation(newGame.location)" ng-model="newGame.location">
                 </label>
                 <label class="item item-input">
                     <i class="icon ion-search placeholder-icon"></i>
-                    <input   ng-click="pickDate()"  type="date" ng-model="newGame.date">
+                    <input  ng-click="pickDate()"  type="date" ng-model="newGame.date">
                 </label>
                 <label class="item item-input">
                     <i class="icon ion-search placeholder-icon"></i>
@@ -57,7 +57,7 @@
                 </label>
                 <label class="item item-input">
                     <i class="icon ion-search placeholder-icon"></i>
-                    <input ng-change="updateMaxPlayers(maxPlayers)" type="text" ng-model="maxPlayers" placeholder="Enter Max Number Of Players">
+                    <input ng-change="updateMaxPlayers(newGame.maxPlayers)" type="text" ng-model="newGame.maxPlayers" placeholder="Enter Max Number Of Players">
                 </label>
                 <h2>Invite Players</h2>
                 <div class="list">
