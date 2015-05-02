@@ -22,7 +22,7 @@
 			var userNotificationId, userNotificationToken;
 			document.addEventListener("deviceready", function() {
 				$timeout(function(){
-				window.plugins.OneSignal.init("3b17d8f2-ede5-11e4-bd44-df53b0e80d36",{googleProjectNumber: "857924958148", autoRegister: true});
+				window.plugins.OneSignal.init("b725d95c-edd7-11e4-af24-97858152d332",{googleProjectNumber: "857924958148" , autoRegister: true});
 				window.plugins.OneSignal.getIds(function(ids) {
 					userNotificationId = ids.userId;
 					userNotificationToken =  ids.pushToken;

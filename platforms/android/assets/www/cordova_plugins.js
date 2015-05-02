@@ -41,6 +41,13 @@ module.exports = [
         "clobbers": [
             "device"
         ]
+    },
+    {
+        "file": "plugins/com.plugin.datepicker/www/android/DatePicker.js",
+        "id": "com.plugin.datepicker.DatePicker",
+        "clobbers": [
+            "datePicker"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -49,6 +56,7 @@ module.exports.metadata =
     "com.onesignal.plugins.OneSignal": "1.5.0",
     "org.apache.cordova.camera": "0.3.6",
     "org.apache.cordova.device": "0.3.0",
+    "com.plugin.datepicker": "0.6.0",
     "android.support.v4": "21.0.1",
     "com.google.playservices": "21.0.0"
 }

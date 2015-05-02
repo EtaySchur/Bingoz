@@ -117,6 +117,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/less/mixins/alerts.less" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/less/mixins/alerts.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/event/alias.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/exports/amd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/android.json" afterPath="$PROJECT_DIR$/plugins/android.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/angular-animate/angular-animate.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/angular-animate/angular-animate.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/angular-animate/angular-animate.min.js.map" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/angular-animate/angular-animate.min.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/angular-animate/angular-animate.min.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/angular-animate/angular-animate.min.js" />
@@ -181,11 +182,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/angular-ui-router/src/common.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/angular-ui-router/src/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/less/component-animations.less" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/less/component-animations.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/var/concat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Bingoz/config.xml" afterPath="$PROJECT_DIR$/platforms/ios/Bingoz/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/grunt/configBridge.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/controllers.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/ios/www/cordova_plugins.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/core.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/core.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/less/core.less" afterPath="$PROJECT_DIR$/platforms/ios/www/less/core.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/css.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/css.js" />
@@ -375,6 +377,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/jquery/src/attributes/val.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/less/variables.less" afterPath="$PROJECT_DIR$/platforms/ios/www/less/variables.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/bootstrap/less/mixins/vendor-prefixes.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/angular-ui-router/src/view.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/angular-ui-router/src/view.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/angular-ui-router/src/viewDirective.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/angular-ui-router/src/viewDirective.js" />
@@ -426,7 +429,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="41" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0655106" vertical-offset="26" max-vertical-offset="6750">
+            <state line="143" column="0" selection-start="4112" selection-end="4112" vertical-scroll-proportion="0.10211946" vertical-offset="2092" max-vertical-offset="6750">
               <folding />
             </state>
           </provider>
@@ -435,7 +438,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="52" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1155">
+            <state line="18" column="30" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
               <folding />
             </state>
           </provider>
@@ -444,7 +447,7 @@
       <file leaf-file-name="ios.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/ios.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="44" selection-start="3281" selection-end="3281" vertical-scroll-proportion="-11.75" vertical-offset="1128" max-vertical-offset="1665">
+            <state line="101" column="38" selection-start="3602" selection-end="3602" vertical-scroll-proportion="-11.75" vertical-offset="1233" max-vertical-offset="1770">
               <folding />
             </state>
           </provider>
@@ -693,6 +696,11 @@
       <created>1429555256451</created>
       <updated>1429555256451</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add ios Support">
+      <created>1430568530806</created>
+      <updated>1430568530806</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -701,16 +709,17 @@
     <layout>
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33723652" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33723652" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19423692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -731,6 +740,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Add ios Support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ios Support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1034,16 +1045,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="52" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/ios.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="44" selection-start="3281" selection-end="3281" vertical-scroll-proportion="-11.75" vertical-offset="1128" max-vertical-offset="1665">
+        <state line="101" column="38" selection-start="3602" selection-end="3602" vertical-scroll-proportion="-11.75" vertical-offset="1233" max-vertical-offset="1770">
           <folding />
         </state>
       </provider>
@@ -1062,9 +1066,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="30" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0655106" vertical-offset="26" max-vertical-offset="6750">
+        <state line="143" column="0" selection-start="4112" selection-end="4112" vertical-scroll-proportion="0.10211946" vertical-offset="2092" max-vertical-offset="6750">
           <folding />
         </state>
       </provider>

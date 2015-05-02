@@ -41,6 +41,13 @@ module.exports = [
         "clobbers": [
             "device"
         ]
+    },
+    {
+        "file": "plugins/com.plugin.datepicker/www/ios/DatePicker.js",
+        "id": "com.plugin.datepicker.DatePicker",
+        "clobbers": [
+            "datePicker"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -50,7 +57,8 @@ module.exports.metadata =
     "com.google.playservices": "21.0.0",
     "com.onesignal.plugins.OneSignal": "1.5.0",
     "org.apache.cordova.camera": "0.3.6",
-    "org.apache.cordova.device": "0.3.0"
+    "org.apache.cordova.device": "0.3.0",
+    "com.plugin.datepicker": "0.6.0"
 }
 // BOTTOM OF METADATA
 });
