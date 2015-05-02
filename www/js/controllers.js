@@ -355,16 +355,30 @@
 
 
 			}
+
 			$scope.addNewGame = function (){
+                var usersObjectsList = {};
+                $scope.invitedPlayersList.forEach(function(playerId){
+                    usersObjectsList[playerId] = {
+                        attendToCome:false
+                    }
+                });
+
+
+                usersObjectsList[$rootScope.currentUser.uid] = {
+                    attendToCome:true
+                }
+
 				$scope.games.$add({
 					location: $scope.newGame.location,
 					date:($scope.newGame.date).getTime(),
-					createdBy:$rootScope.currentPlayer,
+					createdBy:$rootScope.currentUser.uid,
 					maxPlayers:$scope.newGame.maxPlayers,
 					time:($scope.newGame.time).getTime(),
-                    players:$scope.invitedPlayersList
+                    players:usersObjectsList
 				});
                 Notifications.sendNewGameNotification($scope.newGame , $scope.invitedPlayersNotificationsList , $rootScope.currentPlayer);
+
 				$scope.modal.hide();
 			}
 
@@ -383,11 +397,31 @@
 			$scope.removeMe = function (game){
 				for (var key in game.players) {
 					if(key == $rootScope.currentPlayer.$id){
-						delete game.players[key];
+					    game.players[key].attendToCome = false;
 						$scope.games.$save(game);
 					}
 				}
 			}
+
+            $scope.trashGame = function (game){
+                for (var key in game.players) {
+                    if(key == $rootScope.currentPlayer.$id){
+                        delete game.players[key];
+                        $scope.games.$save(game);
+                    }
+                }
+            }
+
+            $scope.showGameToCurrentUser = function(game){
+                for (var key in game.players) {
+                    if(key == $rootScope.currentPlayer.$id){
+                        return true;
+                    }
+                }
+
+
+                return false;
+            }
 
             $scope.invitePlayer = function(player){
                 console.log("Invting Player");
@@ -396,31 +430,34 @@
                 $scope.invitedPlayersNotificationsList.push(player.userNotificationId);
             }
 
-                $scope.unInvitePlayer = function(player){
-                    var playerIndex = $scope.invitedPlayersList.indexOf(player.$id);
-                    $scope.invitedPlayersList.splice(playerIndex , 1);
-                    var notificationIndex = $scope.invitedPlayersNotificationsList.indexOf(player.userNotificationId);
-                    $scope.invitedPlayersNotificationsList.splice(notificationIndex , 1);
-                }
+            $scope.unInvitePlayer = function(player){
+                var playerIndex = $scope.invitedPlayersList.indexOf(player.$id);
+                $scope.invitedPlayersList.splice(playerIndex , 1);
+                var notificationIndex = $scope.invitedPlayersNotificationsList.indexOf(player.userNotificationId);
+                $scope.invitedPlayersNotificationsList.splice(notificationIndex , 1);
+            }
 
 			$scope.addMe = function (game){
 				if(game.players == undefined){
 					game.players = {};
 				}
-				game.players[$rootScope.currentPlayer.$id] = $rootScope.currentPlayer;
+                console.log(game.players[$rootScope.currentPlayer.$id].attendToCome);
+				game.players[$rootScope.currentPlayer.$id].attendToCome = true;
+
 				$scope.games.$save(game);
+                Notifications.playerJoinGameNotification($rootScope.currentPlayer , game.players);
 			}
 
 			$scope.showJoinGameButton = function(game){
-				if(game.players != undefined){
-					for (var key in game.players) {
-						if(key == $rootScope.currentPlayer.$id){
-							return false;
-						}
+                if(game.players != undefined){
+                    for (var key in game.players) {
+                        if(key == $rootScope.currentPlayer.$id && game.players[key].attendToCome){
+                            return false;
+                        }
+                    }
+                }
 
-					}
 
-				}
 				return true;
 			}
 

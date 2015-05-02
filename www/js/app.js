@@ -130,8 +130,7 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
 app.filter('queryPlayer', function() {
 
     return function(input, query) {
-        console.log("PACKAGE FILTER");
-        console.log(input);
+
             var out = [];
         if(query == ''){
             return out;

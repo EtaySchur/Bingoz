@@ -145,11 +145,7 @@
 		.then(function() {
 			$rootScope.players.forEach(function(player){
 				$rootScope.playersKeyArray[player.$id] = player;
-                console.log($rootScope.currentUser.uid);
-                console.log(player.$id);
 				if(player.$id == $rootScope.currentUser.uid){
-                    console.log("Current Player Is");
-                    console.log(player);
 					$rootScope.currentPlayer = player;
 				}
 			});
@@ -238,16 +234,16 @@
 					$scope.$apply();
 				}
 
-				console.log("class me");
+
 				console.log($scope.game.players[$scope.key].chanceToCome);
 				if($scope.game.players[$scope.key].chanceToCome <= 30){
-					console.log('assertive');
+
 					$scope.barColor = 'range-assertive';
 				}else if($scope.game.players[$scope.key].chanceToCome >= 70){
-					console.log('balanced');
+
 					$scope.barColor = "range-balanced";
 				}else{
-					console.log('positive');
+
 					$scope.barColor = "range-positive";
 				}
 
@@ -259,11 +255,8 @@
 			$scope.games = (Chats.getGames());
 			$scope.games.$loaded()
 			.then(function() {
-				console.log("GETTTING");
 				$scope.games.forEach(function(game){
-					console.log(game);
 					if(game.$id == $stateParams.gameId){
-						console.log("OH YEAH");
 						$scope.game = game;
 						if(game.players != undefined){
 							for (var key in game.players) {
@@ -314,7 +307,7 @@
 
 		})
 
-		.controller('GamesCtrl', function($scope , $firebaseArray , $ionicModal , $rootScope , $cordovaDatePicker) {
+		.controller('GamesCtrl', function($rootScope , $scope , $firebaseArray , $ionicModal , $rootScope , $cordovaDatePicker , $http , Notifications) {
 
 
 
@@ -332,14 +325,12 @@
 
 			$scope.pickDate = function () {
 				$cordovaDatePicker.show(dateOptions).then(function(date){
-					console.log("pick date");
 					$scope.newGame.date = date;
 				});
 			};
 
 			$scope.pickTime = function () {
 				$cordovaDatePicker.show(timeOptions).then(function(time){
-					console.log("pick time");
 					$scope.newGame.time = time;
 				});
 
@@ -360,23 +351,33 @@
 			$scope.checkMe = function(game){
 				if(game.players != undefined){
 					return (Object.keys(game.players).length);
-					console.log(Object.keys(game.players).length);
 				}
 
 
 			}
 			$scope.addNewGame = function (){
-				console.log("adding new game");
-				console.log($scope.newGame);
-                console.log($rootScope.currentUser);
+                var usersObjectsList = {};
+                $scope.invitedPlayersList.forEach(function(playerId){
+                    usersObjectsList[playerId] = {
+                        attendToCome:false
+                    }
+                });
+
+
+                usersObjectsList[$rootScope.currentUser.uid] = {
+                    attendToCome:true
+                }
+
 				$scope.games.$add({
 					location: $scope.newGame.location,
 					date:($scope.newGame.date).getTime(),
 					createdBy:$rootScope.currentUser.uid,
 					maxPlayers:$scope.newGame.maxPlayers,
 					time:($scope.newGame.time).getTime(),
-                    players:[$rootScope.currentUser.uid]
+                    players:usersObjectsList
 				});
+                Notifications.sendNewGameNotification($scope.newGame , $scope.invitedPlayersNotificationsList , $rootScope.currentPlayer);
+
 				$scope.modal.hide();
 			}
 
@@ -398,30 +399,65 @@
 						delete game.players[key];
 						$scope.games.$save(game);
 					}
-
 				}
 			}
+
+            $scope.showGameToCurrentUser = function(game){
+                for (var key in game.players) {
+                    if(key == $rootScope.currentPlayer.$id){
+                        return true;
+                    }
+                }
+
+
+                return false;
+            }
+
+            $scope.invitePlayer = function(player){
+                console.log("Invting Player");
+                console.log(player);
+                $scope.invitedPlayersList.push(player.$id);
+                $scope.invitedPlayersNotificationsList.push(player.userNotificationId);
+            }
+
+            $scope.unInvitePlayer = function(player){
+                var playerIndex = $scope.invitedPlayersList.indexOf(player.$id);
+                $scope.invitedPlayersList.splice(playerIndex , 1);
+                var notificationIndex = $scope.invitedPlayersNotificationsList.indexOf(player.userNotificationId);
+                $scope.invitedPlayersNotificationsList.splice(notificationIndex , 1);
+            }
 
 			$scope.addMe = function (game){
 				if(game.players == undefined){
 					game.players = {};
 				}
-				game.players[$rootScope.currentPlayer.$id] = $rootScope.currentPlayer;
+                console.log(game.players[$rootScope.currentPlayer.$id].attendToCome);
+				game.players[$rootScope.currentPlayer.$id].attendToCome = true;
 				$scope.games.$save(game);
 			}
 
 			$scope.showJoinGameButton = function(game){
-				if(game.players != undefined){
-					for (var key in game.players) {
-						if(key == $rootScope.currentPlayer.$id){
-							return false;
-						}
+                if(game.players != undefined){
+                    for (var key in game.players) {
+                        console.log("KEY "+key);
+                        if(key == $rootScope.currentPlayer.$id){
+                            return false;
+                        }
+                    }
+                }
 
-					}
 
-				}
 				return true;
 			}
+
+                $scope.queryUsers = function(query){
+                    new Firebase("https://bingoz.firebaseio.com/players")
+                        .st
+                        .once('value', function(snap) {
+                            console.log('accounts matching email address', snap.val())
+                        });
+
+                };
 
 
 
@@ -436,7 +472,16 @@
 
 			});
 			$scope.openModal = function() {
-				$scope.newGame = {};
+                $scope.invitedPlayersNotificationsList = [];
+                $scope.invitedPlayersList = [];
+                console.log($rootScope.players);
+				$scope.newGame = {
+                    location:"Fuad Place",
+                    date:new Date(),
+                    time:new Date(),
+                    maxPlayers:"7"
+                };
+
 				$scope.modal.show();
 			};
 			$scope.closeModal = function() {
