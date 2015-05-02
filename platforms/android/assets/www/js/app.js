@@ -26,7 +26,7 @@ angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'start
   var user = $rootScope.ref.getAuth();
   $rootScope.ref.unauth();
   if(user && user !== "null" && user !== "undefined"){
-  $location.path('/tab/dash');    
+      $location.path('/tab/dash');    
   }
 
 
