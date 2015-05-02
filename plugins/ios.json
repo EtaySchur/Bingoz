@@ -87,13 +87,13 @@
     },
     "installed_plugins": {
         "android.support.v4": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "com.fuadfuad.bingoz"
         },
         "com.google.playservices": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "com.onesignal.plugins.OneSignal": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "com.fuadfuad.bingoz"
         },
         "org.apache.cordova.camera": {
             "PACKAGE_NAME": "com.ionicframework.starter"
