@@ -28,9 +28,6 @@
 					userNotificationToken =  ids.pushToken;
 				});
 				},300)
-				    // // retrieve the DOM element that had the ng-app attribute
-				    // var domElement = document.getElementById(...) / document.querySelector(...);
-				    // angular.bootstrap(domElement, ["angularAppName"]);
 			}, false);
 
 			var players = new Firebase("https://bingoz.firebaseio.com/players");
@@ -46,10 +43,10 @@
 						console.log("Error creating user:", error);
 					} else {
 						players.child(userData.uid).set({
-							firstName: user.firstName,
-							lastName: user.lastName,
-							fullName: user.firstName+" "+user.lastName,
-							nickName: user.nickName || user.email.replace(/@.*/, ''),
+							// firstName: user.firstName,
+							// lastName: user.lastName,
+							// fullName: user.firstName+" "+user.lastName,
+							nickName: user.email.replace(/@.*/, ''),
 							userNotificationId: userNotificationId || "error to get userNotificationId",
 							userNotificationToken: userNotificationToken || "error to get userNotificationToken"
 						},function(error){
