@@ -28,9 +28,6 @@
 					userNotificationToken =  ids.pushToken;
 				});
 				},300)
-				    // // retrieve the DOM element that had the ng-app attribute
-				    // var domElement = document.getElementById(...) / document.querySelector(...);
-				    // angular.bootstrap(domElement, ["angularAppName"]);
 			}, false);
 
 			var players = new Firebase("https://bingoz.firebaseio.com/players");
@@ -45,13 +42,11 @@
 						$rootScope.$digest();
 						console.log("Error creating user:", error);
 					} else {
-						console.log(userData);
-						console.log(user);
 						players.child(userData.uid).set({
-							firstName: user.firstName,
-							lastName: user.lastName,
-							fullName: user.firstName+" "+user.lastName,
-							nickName: user.nickName || user.email.replace(/@.*/, ''),
+							// firstName: user.firstName,
+							// lastName: user.lastName,
+							// fullName: user.firstName+" "+user.lastName,
+							nickName: user.email.replace(/@.*/, ''),
 							userNotificationId: userNotificationId || "error to get userNotificationId",
 							userNotificationToken: userNotificationToken || "error to get userNotificationToken"
 						},function(error){
@@ -67,6 +62,7 @@
 									if (error) {
 										console.log("Login Failed!", error);
 									} else {
+										$rootScope.currentUser = authData;
 										$location.path('/tab/dash'); 
 										$rootScope.$digest();
 
@@ -161,7 +157,10 @@
 
 
 
-		.controller('DashCtrl', function($scope) {})
+		.controller('DashCtrl', function($scope, $rootScope) {
+			console.log($rootScope.currentUser);
+
+		})
 
 		.controller('SettingsCtrl', function($rootScope , $scope ,$cordovaCamera , $cordovaImagePicker  ) {
 
