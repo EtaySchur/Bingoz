@@ -314,7 +314,7 @@
 
 		})
 
-		.controller('GamesCtrl', function($scope , $firebaseArray , $ionicModal , $rootScope , $cordovaDatePicker) {
+		.controller('GamesCtrl', function($rootScope , $scope , $firebaseArray , $ionicModal , $rootScope , $cordovaDatePicker) {
 
 
 
@@ -367,15 +367,15 @@
 			}
 			$scope.addNewGame = function (){
 				console.log("adding new game");
-				console.log($scope.newGame);
-                console.log($rootScope.currentUser);
+                console.log($scope.invitedPlayersList);
+
 				$scope.games.$add({
 					location: $scope.newGame.location,
 					date:($scope.newGame.date).getTime(),
 					createdBy:$rootScope.currentUser.uid,
 					maxPlayers:$scope.newGame.maxPlayers,
 					time:($scope.newGame.time).getTime(),
-                    players:[$rootScope.currentUser.uid]
+                    players:$scope.invitedPlayersList
 				});
 				$scope.modal.hide();
 			}
@@ -398,9 +398,19 @@
 						delete game.players[key];
 						$scope.games.$save(game);
 					}
-
 				}
 			}
+
+            $scope.invitePlayer = function(player){
+                console.log("Invting Player");
+                console.log(player);
+                $scope.invitedPlayersList.push(player.$id);
+            }
+
+                $scope.unInvitePlayer = function(player){
+                    var index = $scope.invitedPlayersList.indexOf(player.$id);
+                    $scope.invitedPlayersList.splice(index , 1);
+                }
 
 			$scope.addMe = function (game){
 				if(game.players == undefined){
@@ -423,6 +433,15 @@
 				return true;
 			}
 
+                $scope.queryUsers = function(query){
+                    new Firebase("https://bingoz.firebaseio.com/players")
+                        .st
+                        .once('value', function(snap) {
+                            console.log('accounts matching email address', snap.val())
+                        });
+
+                };
+
 
 
 
@@ -436,6 +455,8 @@
 
 			});
 			$scope.openModal = function() {
+                $scope.invitedPlayersList = [];
+                console.log($rootScope.players);
 				$scope.newGame = {};
 				$scope.modal.show();
 			};
