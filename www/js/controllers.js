@@ -62,6 +62,7 @@
 									if (error) {
 										console.log("Login Failed!", error);
 									} else {
+                                        console.log("")
 										$rootScope.currentUser = authData;
 										$location.path('/tab/dash'); 
 										$rootScope.$digest();
@@ -144,7 +145,11 @@
 		.then(function() {
 			$rootScope.players.forEach(function(player){
 				$rootScope.playersKeyArray[player.$id] = player;
-				if(player.$id == '0526878548'){
+                console.log($rootScope.currentUser.uid);
+                console.log(player.$id);
+				if(player.$id == $rootScope.currentUser.uid){
+                    console.log("Current Player Is");
+                    console.log(player);
 					$rootScope.currentPlayer = player;
 				}
 			});

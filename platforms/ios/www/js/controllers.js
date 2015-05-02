@@ -28,9 +28,6 @@
 					userNotificationToken =  ids.pushToken;
 				});
 				},300)
-				    // // retrieve the DOM element that had the ng-app attribute
-				    // var domElement = document.getElementById(...) / document.querySelector(...);
-				    // angular.bootstrap(domElement, ["angularAppName"]);
 			}, false);
 
 			var players = new Firebase("https://bingoz.firebaseio.com/players");
@@ -46,10 +43,10 @@
 						console.log("Error creating user:", error);
 					} else {
 						players.child(userData.uid).set({
-							firstName: user.firstName,
-							lastName: user.lastName,
-							fullName: user.firstName+" "+user.lastName,
-							nickName: user.nickName || user.email.replace(/@.*/, ''),
+							// firstName: user.firstName,
+							// lastName: user.lastName,
+							// fullName: user.firstName+" "+user.lastName,
+							nickName: user.email.replace(/@.*/, ''),
 							userNotificationId: userNotificationId || "error to get userNotificationId",
 							userNotificationToken: userNotificationToken || "error to get userNotificationToken"
 						},function(error){
@@ -65,6 +62,7 @@
 									if (error) {
 										console.log("Login Failed!", error);
 									} else {
+                                        console.log("")
 										$rootScope.currentUser = authData;
 										$location.path('/tab/dash'); 
 										$rootScope.$digest();
@@ -147,7 +145,11 @@
 		.then(function() {
 			$rootScope.players.forEach(function(player){
 				$rootScope.playersKeyArray[player.$id] = player;
-				if(player.$id == '0526878548'){
+                console.log($rootScope.currentUser.uid);
+                console.log(player.$id);
+				if(player.$id == $rootScope.currentUser.uid){
+                    console.log("Current Player Is");
+                    console.log(player);
 					$rootScope.currentPlayer = player;
 				}
 			});
@@ -366,12 +368,14 @@
 			$scope.addNewGame = function (){
 				console.log("adding new game");
 				console.log($scope.newGame);
+                console.log($rootScope.currentUser);
 				$scope.games.$add({
 					location: $scope.newGame.location,
 					date:($scope.newGame.date).getTime(),
-					createdBy:$rootScope.currentPlayer.$id,
+					createdBy:$rootScope.currentUser.uid,
 					maxPlayers:$scope.newGame.maxPlayers,
-					time:($scope.newGame.time).getTime()
+					time:($scope.newGame.time).getTime(),
+                    players:[$rootScope.currentUser.uid]
 				});
 				$scope.modal.hide();
 			}

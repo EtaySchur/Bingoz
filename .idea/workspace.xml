@@ -4,9 +4,17 @@
     <list default="true" id="c5a17fcc-b4fd-435e-9cac-7600af50207a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Bingoz/Bingoz-Info.plist" afterPath="$PROJECT_DIR$/platforms/ios/Bingoz/Bingoz-Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/controllers.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tab-games.html" afterPath="$PROJECT_DIR$/www/templates/tab-games.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/sign-up.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/sign-up.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/css/style.css" afterPath="$PROJECT_DIR$/platforms/ios/www/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/tab-games.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/tab-games.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/tab-settings.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/tab-settings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tab-settings.html" afterPath="$PROJECT_DIR$/www/templates/tab-settings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/tabs.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/tabs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FireBase.iws" />
@@ -33,18 +41,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="19" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1980">
-              <folding>
-                <marker date="1430574050000" expanded="true" signature="661:1516" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="399" column="17" selection-start="10248" selection-end="10248" vertical-scroll-proportion="0.83475786" vertical-offset="5692" max-vertical-offset="6810">
+            <state line="27" column="0" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
               <folding />
             </state>
           </provider>
@@ -55,26 +52,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="30" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab-games.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/tab-games.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="24" selection-start="2657" selection-end="2657" vertical-scroll-proportion="-9.666667" vertical-offset="548" max-vertical-offset="1125">
-              <folding>
-                <marker date="1430575476000" expanded="true" signature="1836:3406" placeholder="..." />
-                <marker date="1430575476000" expanded="true" signature="1861:2120" placeholder="..." />
-                <marker date="1430575476000" expanded="true" signature="2000:2094" placeholder="..." />
-                <marker date="1430575476000" expanded="true" signature="2142:3215" placeholder="..." />
-                <marker date="1430575476000" expanded="true" signature="2184:3192" placeholder="..." />
-                <marker date="1430575476000" expanded="true" signature="2232:2425" placeholder="..." />
-                <marker date="1430575476000" expanded="true" signature="2473:2656" placeholder="..." />
-                <marker date="1430575476000" expanded="true" signature="2704:2886" placeholder="..." />
-                <marker date="1430575476000" expanded="true" signature="2934:3173" placeholder="..." />
-                <marker date="1430575476000" expanded="true" signature="3281:3384" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -106,10 +83,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab-settings.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="195" column="0" selection-start="5470" selection-end="5470" vertical-scroll-proportion="-14.0" vertical-offset="2561" max-vertical-offset="6840">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tab-settings.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="44" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="315">
+            <state line="40" column="42" selection-start="1400" selection-end="1400" vertical-scroll-proportion="1.1857708" vertical-offset="0" max-vertical-offset="855">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="608" selection-end="608" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
@@ -148,16 +145,16 @@
       <list>
         <option value="$PROJECT_DIR$/www/templates/tab-account.html" />
         <option value="$PROJECT_DIR$/www/js/services.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/templates/tab-settings.html" />
         <option value="$PROJECT_DIR$/www/templates/tabs.html" />
         <option value="$PROJECT_DIR$/www/templates/game-detail.html" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/plugins/ios.json" />
         <option value="$PROJECT_DIR$/ionic.project" />
         <option value="$PROJECT_DIR$/www/templates/tab-games.html" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/www/templates/tab-settings.html" />
       </list>
     </option>
   </component>
@@ -165,7 +162,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1916" />
-    <option name="height" value="778" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -339,21 +336,25 @@
       <created>1430574022932</created>
       <updated>1430574022932</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="change current player">
+      <created>1430583234561</created>
+      <updated>1430583234561</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1916" height="778" extended-state="6" />
+    <frame x="0" y="22" width="1916" height="1058" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.409621" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4089027" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33723652" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23291926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -383,7 +384,8 @@
     </option>
     <MESSAGE value="Add ios Support" />
     <MESSAGE value="Add ios Build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ios Build" />
+    <MESSAGE value="change current player" />
+    <option name="LAST_COMMIT_MESSAGE" value="change current player" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -448,7 +450,9 @@
     <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="44" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="315">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -525,7 +529,9 @@
     <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="44" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="315">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -600,11 +606,6 @@
         <state line="7" column="77" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1335" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="38" selection-start="776" selection-end="776" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="855" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="24" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="27105">
@@ -629,20 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="44" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tabs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/chat-detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="282" selection-end="488" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="300" />
@@ -652,15 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="9" selection-start="1214" selection-end="1359" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1155">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="19" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1980">
-          <folding>
-            <marker date="1430574050000" expanded="true" signature="661:1516" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,13 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
@@ -710,24 +681,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="24" selection-start="2657" selection-end="2657" vertical-scroll-proportion="-9.666667" vertical-offset="548" max-vertical-offset="1125">
           <folding>
-            <marker date="1430575476000" expanded="true" signature="1836:3406" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="1861:2120" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="2000:2094" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="2142:3215" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="2184:3192" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="2232:2425" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="2473:2656" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="2704:2886" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="2934:3173" placeholder="..." />
-            <marker date="1430575476000" expanded="true" signature="3281:3384" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430575476000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="608" selection-end="608" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tabs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="12" selection-start="644" selection-end="644" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="30" selection-start="858" selection-end="858" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="399" column="17" selection-start="10248" selection-end="10248" vertical-scroll-proportion="0.83475786" vertical-offset="5692" max-vertical-offset="6810">
+        <state line="195" column="0" selection-start="5470" selection-end="5470" vertical-scroll-proportion="-14.0" vertical-offset="2561" max-vertical-offset="6840">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="42" selection-start="1400" selection-end="1400" vertical-scroll-proportion="1.1857708" vertical-offset="0" max-vertical-offset="855">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

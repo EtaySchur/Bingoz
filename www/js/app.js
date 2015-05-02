@@ -25,7 +25,7 @@ angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'start
   $rootScope.currentUser = $rootScope.ref.getAuth();
   //to log out uncomment this line
   // $rootScope.ref.unauth();
-  console.log($rootScope.currentUser);
+
   if($rootScope.currentUser && $rootScope.currentUser !== "null" && $rootScope.currentUser !== "undefined"){
       $location.path('/tab/dash');    
   }

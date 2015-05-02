@@ -1,4 +1,40 @@
-<ion-view view-title="Settings">
+<ion-view view-title="Profile">
+<ion-content has-header="true">
+<div id="profile-bg"></div>
+<div id="content">
+  <div class="profile-bg"></div>
+  <div id="profile-info">
+      <img id="profile-image" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/p200x200/538605_10151328053592435_324446772_n.jpg?oh=bfe6556f47670f84909f6b3cd7b40770&oe=555CC691&__gda__=1431456772_862f2b518690c8d70f03f630162090d6">
+      <h3 id="profile-name">Avi</h3>
+      <span id="profile-description">Game Played 276  Mony Balance 650</span>
+  </div>
+</div>
+    <div class="list card">
+
+        <div class="item item-avatar">
+            <img ng-src="data:image/jpeg;base64,{{currentPlayer.image.image}}" style="width: 64px; height: 64px">
+            <h2>{{currentPlayer.name}}</h2>
+        </div>
+        <a ng-click="upload()" class="item item-icon-left assertive" href="#">
+            <i class="fa fa-camera"></i>
+            Take a  Picture
+        </a>
+
+    </div>
+<ul class="list">
+  <li class="item item-toggle">
+     tutn on/off notifications
+     <label class="toggle toggle-assertive">
+       <input type="checkbox" checked="true">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+</ul>
+</ion-content>
+</ion-view>
+<!-- <ion-view view-title="Settings">
     <ion-content>
         <div class="list card">
 
@@ -13,4 +49,4 @@
 
         </div>
     </ion-content>
-</ion-view>
+</ion-view> -->
