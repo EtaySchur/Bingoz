@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'starter.services' , 'firebase' , 'ngCordova' ])
+var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'starter.services' , 'firebase' , 'ngCordova' ])
 
 .run(function($ionicPlatform, $rootScope, $localstorage, $location) {
   $ionicPlatform.ready(function() {
@@ -25,13 +25,14 @@ angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'start
   $rootScope.currentUser = $rootScope.ref.getAuth();
   //to log out uncomment this line
   // $rootScope.ref.unauth();
-  console.log($rootScope.currentUser);
+
   if($rootScope.currentUser && $rootScope.currentUser !== "null" && $rootScope.currentUser !== "undefined"){
       $location.path('/tab/dash');    
   }
 
 
 })
+
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -123,4 +124,27 @@ angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'start
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/sign-up');
 
+});
+
+
+app.filter('queryPlayer', function() {
+
+    return function(input, query) {
+
+            var out = [];
+        if(query == ''){
+            return out;
+        }else{
+            for (var i = 0; i < input.length; i++){
+                if(query != undefined){
+                    if((input[i].nickName).toLowerCase().indexOf(query.toLowerCase()) > -1 ){
+                        out.push(input[i]);
+                    }
+                }
+
+            }
+            return out;
+        }
+
+    };
 });

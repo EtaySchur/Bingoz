@@ -2,6 +2,18 @@ angular.module('starter.services', [])
     .factory('Notifications', function($firebaseArray , $http , $rootScope) {
         var appId = "b725d95c-edd7-11e4-af24-97858152d332";
 
+        function getUsersNotificationsIds (players){
+            var invitedPlayersIds = [];
+            for (var key in players) {
+                console.log($rootScope.playersKeyArray[key]);
+                if($rootScope.playersKeyArray[key].userNotificationId != 'error to get userNotificationId'){
+                    invitedPlayersIds.push($rootScope.playersKeyArray[key].userNotificationId);
+                }
+            }
+            return invitedPlayersIds;
+        }
+
+
         return {
             sendNewGameNotification:function(newGame , invitedPlayersIds , createdByUser){
 
@@ -29,18 +41,8 @@ angular.module('starter.services', [])
                     });
             },
             playerJoinGameNotification:function(currentUser , invitedPlayers){
-                console.log($rootScope.playersKeyArray);
-                var invitedPlayersIds = [];
-                for (var key in invitedPlayers) {
-                    console.log($rootScope.playersKeyArray[key]);
-                    if($rootScope.playersKeyArray[key].userNotificationId != 'error to get userNotificationId'){
+                var invitedPlayersIds = getUsersNotificationsIds(invitedPlayers);
 
-                        invitedPlayersIds.push($rootScope.playersKeyArray[key].userNotificationId);
-                    }
-
-                }
-                console.log("This is the list");
-                console.log(invitedPlayersIds);
                 var data = {
                     "app_id": appId,
                     "include_player_ids":invitedPlayersIds,

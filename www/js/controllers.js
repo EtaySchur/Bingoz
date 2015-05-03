@@ -18,7 +18,7 @@
 			}
 		})
 
-		.controller('SignUpCtrl', function($scope,$rootScope, $localstorage, $state, $location,$timeout){
+		.controller('SignUpCtrl', function($scope, $rootScope, $localstorage, $state, $location,$timeout){
 			var userNotificationId, userNotificationToken;
 			document.addEventListener("deviceready", function() {
 				$timeout(function(){
@@ -145,8 +145,13 @@
 		.then(function() {
 			$rootScope.players.forEach(function(player){
 				$rootScope.playersKeyArray[player.$id] = player;
+                console.log("playerID"+player.$id);
+                console.log("current Players ID"+$rootScope.currentUser.uid);
 				if(player.$id == $rootScope.currentUser.uid){
 					$rootScope.currentPlayer = player;
+                    console.log("This is THE THE THE current player");
+                    console.log(player);
+
 				}
 			});
 		})
@@ -370,6 +375,7 @@
                 }
 
 				$scope.games.$add({
+                    name:$scope.newGame.name,
 					location: $scope.newGame.location,
 					date:($scope.newGame.date).getTime(),
 					createdBy:$rootScope.currentUser.uid,
@@ -380,19 +386,23 @@
                 Notifications.sendNewGameNotification($scope.newGame , $scope.invitedPlayersNotificationsList , $rootScope.currentPlayer);
 
 				$scope.modal.hide();
-			}
+			};
 
 			$scope.updateLocation = function(location){
 				$scope.newGame.location  = location;
-			}
+			};
 
 			$scope.updateDate = function(date){
 				$scope.newGame.date  = date;
-			}
+			};
 
 			$scope.updateMaxPlayers = function(maxPlayers){
 				$scope.newGame.maxPlayers  = maxPlayers;
-			}
+			};
+
+            $scope.updateName = function(name){
+                $scope.newGame.name  = name;
+            };
 
 			$scope.removeMe = function (game){
 				for (var key in game.players) {
@@ -401,7 +411,7 @@
 						$scope.games.$save(game);
 					}
 				}
-			}
+			};
 
             $scope.trashGame = function (game){
                 for (var key in game.players) {
@@ -410,32 +420,35 @@
                         $scope.games.$save(game);
                     }
                 }
-            }
+            };
 
             $scope.showGameToCurrentUser = function(game){
-                for (var key in game.players) {
-                    if(key == $rootScope.currentPlayer.$id){
-                        return true;
+                    console.log("This is Current Player");
+                    console.log($rootScope.currentPlayer);
+                    for (var key in game.players) {
+                        if($rootScope.currentPlayer != undefined){
+                            if(key == $rootScope.currentPlayer.$id){
+                                return true;
+                            }
+                        }
+
                     }
-                }
-
-
                 return false;
-            }
+            };
 
             $scope.invitePlayer = function(player){
                 console.log("Invting Player");
                 console.log(player);
                 $scope.invitedPlayersList.push(player.$id);
                 $scope.invitedPlayersNotificationsList.push(player.userNotificationId);
-            }
+            };
 
             $scope.unInvitePlayer = function(player){
                 var playerIndex = $scope.invitedPlayersList.indexOf(player.$id);
                 $scope.invitedPlayersList.splice(playerIndex , 1);
                 var notificationIndex = $scope.invitedPlayersNotificationsList.indexOf(player.userNotificationId);
                 $scope.invitedPlayersNotificationsList.splice(notificationIndex , 1);
-            }
+            };
 
 			$scope.addMe = function (game){
 				if(game.players == undefined){
@@ -446,7 +459,7 @@
 
 				$scope.games.$save(game);
                 Notifications.playerJoinGameNotification($rootScope.currentPlayer , game.players);
-			}
+			};
 
 			$scope.showJoinGameButton = function(game){
                 if(game.players != undefined){
@@ -459,21 +472,7 @@
 
 
 				return true;
-			}
-
-                $scope.queryUsers = function(query){
-                    new Firebase("https://bingoz.firebaseio.com/players")
-                        .st
-                        .once('value', function(snap) {
-                            console.log('accounts matching email address', snap.val())
-                        });
-
-                };
-
-
-
-
-
+			};
 
 			$ionicModal.fromTemplateUrl('my-modal.html', {
 				scope: $scope,

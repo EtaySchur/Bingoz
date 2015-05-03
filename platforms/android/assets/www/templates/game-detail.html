@@ -22,7 +22,7 @@
             </a>
         </div>
         <div class="list">
-            <div ng-repeat="(myKey, player) in game.players"  class="item item-thumbnail-left">
+            <div ng-show="player.attendToCome" ng-repeat="(myKey, player) in game.players"  class="item item-thumbnail-left">
                 <img ng-src="data:image/jpeg;base64,{{playersKeyArray[myKey].image.image}}" style="width: 64px; height: 64px">
                 <div ng-class="{'range-positive' : player.chanceToCome > 30 && player.chanceToCome <= 70 , 'range-danger': player.chanceToCome <= 30 , 'range-balanced': player.chanceToCome > 70 && player.chanceToCome <= 100 }" class="item range">
                     <input readonly ng-change="games.$save(game)" ng-model="player.chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{player.chanceToCome}}">

@@ -2,18 +2,389 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a17fcc-b4fd-435e-9cac-7600af50207a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Bingoz/Bingoz-Info.plist" afterPath="$PROJECT_DIR$/platforms/ios/Bingoz/Bingoz-Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/platforms/android/assets/www/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular.min.js.gzip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/img/ionic.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/ionic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/fonts/ionicons.eot" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/fonts/ionicons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/fonts/ionicons.ttf" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/fonts/ionicons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/fonts/ionicons.woff" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/fonts/ionicons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/.bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/.bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/.bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/.bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/.bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/.bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/.bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/.bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/.bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/.csscomb.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/.csscomb.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/.csslintrc" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/.csslintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/.jscsrc" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/.jscsrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/.jshintrc" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/.jshintrc" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/CHANGELOG.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/CHANGELOG.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data/Data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/LICENSE" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/LICENSE" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/MIT-LICENSE.txt" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/MIT-LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/README.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/README.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/README.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/README.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/README.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/README.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/README.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/README.md" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/effects/Tween.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_action-sheet.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_action-sheet.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_animated.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_animated.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_animations.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_animations.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_backdrop.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_backdrop.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_badge.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_badge.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_bar.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_bar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_button-bar.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_button-bar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_button.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_button.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_checkbox.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_checkbox.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_core.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/manipulation/_evalUrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_form.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_form.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_grid.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_grid.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_icons.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-animation.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-animation.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-font.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-font.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_items.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_items.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_larger.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_list.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_list.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_loaders.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_loaders.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_loading.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_loading.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_menu.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_menu.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_mixins.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_mixins.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_modal.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_modal.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_path.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_platform.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_platform.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_popover.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_popover.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_popup.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_popup.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_progress.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_progress.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_radio.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_radio.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_range.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_range.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_refresher.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_refresher.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_reset.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_reset.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_scaffolding.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_scaffolding.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_select.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_select.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_slide-box.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_slide-box.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_spinner.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_spinner.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_split-pane.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_split-pane.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_stacked.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_tabs.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_tabs.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_toggle.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_toggle.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_transitions.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_transitions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_type.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_type.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_util.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_util.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_variables.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/_variables.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data/accepts.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data/accepts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/access.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/addGetHookIf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/affix.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/event/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/alerts.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/alerts.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/alerts.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/alerts.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/event/alias.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/exports/amd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/angular-animate.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/angular-animate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/angular-animate.min.js.map" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/angular-animate.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/angular-animate.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/angular-animate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular-csp.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular-csp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/angular-sanitize.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/angular-sanitize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/angular-sanitize.min.js.map" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/angular-sanitize.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/angular-sanitize.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/angular-sanitize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/api/angular-ui-router.d.ts" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/api/angular-ui-router.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/release/angular-ui-router.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/release/angular-ui-router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/release/angular-ui-router.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/release/angular-ui-router.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/animated.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/animated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/effects/animatedSelector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/controllers.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/arr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/attr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/background-variant.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/background-variant.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/badges.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/badges.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap-theme.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/bootstrap.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/border-radius.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/border-radius.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/bower.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/breadcrumbs.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/breadcrumbs.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/bs-commonjs-generator.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/bs-commonjs-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/bs-glyphicons-data-generator.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/bs-glyphicons-data-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/bs-lessdoc-parser.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/bs-lessdoc-parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/bs-raw-files-generator.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/bs-raw-files-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/button-groups.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/buttons.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/buttons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/buttons.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/buttons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/callbacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/carousel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/carousel.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/carousel.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/center-block.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/center-block.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/chat-detail.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/chat-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/class2type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/classes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/clearfix.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/clearfix.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/close.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/close.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/code.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/code.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/collapse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/common.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/component-animations.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/component-animations.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/concat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/configBridge.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/game-detail.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/game-detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/game-detail.html" afterPath="$PROJECT_DIR$/www/templates/game-detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/services.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/cordova.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/core.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/cssExpand.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/curCSS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data/var/data_priv.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data/var/data_priv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data/var/data_user.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/data/var/data_user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/defaultDisplay.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/defaultDisplay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/deferred.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/queue/delay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/deprecated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/dimensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/dropdowns.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/dropdowns.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/effects.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/effects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/event.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/traversing/findFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/fixed-width.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/css/font-awesome.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/font-awesome.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/platforms/android/assets/www/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/forms.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/forms.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/forms.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/game-detail.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/game-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/getStyles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/exports/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/glyphicons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/gradients.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/gradients.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/grid-framework.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/grid-framework.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/grid.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/grid.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/grid.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/grid.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/hasOwn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/hiddenVisibleSelectors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/hide-text.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/hide-text.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/icons.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/image.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/image.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/index.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/indexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/input-groups.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/intro.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/intro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic-angular.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic-angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic-angular.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic-angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic.bundle.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic.bundle.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic.bundle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/css/ionic.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/css/ionic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/css/ionic.min.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/css/ionic.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/js/ionic.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionic.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionic.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/ionicons.scss" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/scss/ionicons/ionicons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/fonts/ionicons.svg" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ionic/fonts/ionicons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/isHidden.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/isHidden.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/dist/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/dist/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/dist/jquery.min.map" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/dist/jquery.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/jsonp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/jumbotron.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/jumbotron.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/labels.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/labels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/labels.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/labels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/larger.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/list-group.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/list-group.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/list-group.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/list-group.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/list.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/manipulation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/media.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/media.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/mixins.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/modals.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/modals.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/nav-divider.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/nav-divider.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/nav-vertical-align.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/nav-vertical-align.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/navbar.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/navbar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/navs.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/navs.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/dist/ng-cordova-mocks.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/dist/ng-cordova-mocks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/dist/ng-cordova-mocks.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/dist/ng-cordova-mocks.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/dist/ng-cordova.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/dist/ng-cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/dist/ng-cordova.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/dist/ng-cordova.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/var/nonce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/normalize.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/normalize.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/js/npm.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/dist/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/offset.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/offset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/opacity.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/opacity.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/outro.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/outro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/package.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/package.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/package.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-animate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/package.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-sanitize/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/package.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/package.json" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/ngCordova/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/pager.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/pager.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/pagination.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/pagination.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/pagination.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/pagination.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/panels.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/panels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/panels.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/panels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/parseHTML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/parseJSON.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/parseJSON.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/parseXML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/path.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/pnum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/popover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/popovers.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/popovers.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/print.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/print.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/progress-bar.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/progress-bar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/progress-bars.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/progress-bars.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/prop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/push.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/queue.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/queue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/manipulation/var/rcheckableType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/ready.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/reset-filter.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/reset-filter.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/resize.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/resize.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/resolve.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/resolve.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/responsive-embed.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/responsive-embed.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/responsive-utilities.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/responsive-utilities.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/responsive-visibility.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/responsive-visibility.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/rmargin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/traversing/var/rneedsContext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/rnotwhite.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/rnotwhite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/var/rnumnonpx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/var/rquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/core/var/rsingleTag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/sauce_browsers.yml" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/grunt/sauce_browsers.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/scaffolding.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/scaffolding.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/selector-native.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/selector-sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/selector.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/serialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/services.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/services.js" afterPath="$PROJECT_DIR$/www/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/templates/tab-games.html" afterPath="$PROJECT_DIR$/platforms/ios/www/templates/tab-games.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/size.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/size.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/sizzle/dist/sizzle.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/sizzle/dist/sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/sizzle/dist/sizzle.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/sizzle/dist/sizzle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/sizzle/dist/sizzle.min.map" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/sizzle/dist/sizzle.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/slice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/stacked.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/state.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/stateDirectives.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/stateDirectives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/stateFilters.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/stateFilters.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/strundefined.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/strundefined.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/css/style.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/event/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/manipulation/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/swap.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/css/swap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-chats.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-chats.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-dash.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-dash.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/tab-focus.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/tab-focus.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-games.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-games.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tab-games.html" afterPath="$PROJECT_DIR$/www/templates/tab-games.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-settings.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/tab-settings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tab-settings.html" afterPath="$PROJECT_DIR$/www/templates/tab-settings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/table-row.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/table-row.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/tables.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/tables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/tabs.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/tabs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/templateFactory.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/templateFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/text-emphasis.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/text-emphasis.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/text-overflow.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/text-overflow.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/theme.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/thumbnails.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/thumbnails.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/var/toString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/tooltip.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/tooltip.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/js/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/traversing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/type.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/ui-bootstrap-tpls.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/ui-bootstrap-tpls.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/ui-bootstrap-tpls.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/ui-bootstrap-tpls.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/ui-bootstrap.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/ui-bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/ui-bootstrap.min.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-bootstrap/ui-bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/urlMatcherFactory.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/urlMatcherFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/urlRouter.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/urlRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/utilities.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/utilities.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/attributes/val.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/less/variables.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/mixins/vendor-prefixes.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/view.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/viewDirective.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/viewDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/viewScroll.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/angular-ui-router/src/viewScroll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/wells.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/bootstrap/less/wells.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/wrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/jquery/src/ajax/xhr.js" />
     </list>
     <ignored path="FireBase.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +407,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="24" selection-start="3617" selection-end="3617" vertical-scroll-proportion="0.0" vertical-offset="1672" max-vertical-offset="2340">
+            <state line="25" column="40" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.49561402" vertical-offset="36" max-vertical-offset="2385">
               <folding />
             </state>
           </provider>
@@ -81,19 +452,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="38" selection-start="2699" selection-end="2714" vertical-scroll-proportion="-6.6153846" vertical-offset="1088" max-vertical-offset="7680">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="345">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="345">
+            <state line="158" column="31" selection-start="4643" selection-end="4643" vertical-scroll-proportion="-17.076923" vertical-offset="1926" max-vertical-offset="7665">
               <folding />
             </state>
           </provider>
@@ -108,10 +479,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="78" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.4777563" vertical-offset="203" max-vertical-offset="2175">
+            <state line="6" column="34" selection-start="299" selection-end="305" vertical-scroll-proportion="-3.4615386" vertical-offset="0" max-vertical-offset="2205">
               <folding />
             </state>
           </provider>
@@ -145,12 +516,12 @@
         <option value="$PROJECT_DIR$/plugins/ios.json" />
         <option value="$PROJECT_DIR$/ionic.project" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/templates/tab-settings.html" />
         <option value="$PROJECT_DIR$/www/templates/game-detail.html" />
+        <option value="$PROJECT_DIR$/www/js/services.js" />
         <option value="$PROJECT_DIR$/www/templates/tab-games.html" />
         <option value="$PROJECT_DIR$/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/www/templates/tab-settings.html" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/js/services.js" />
       </list>
     </option>
   </component>
@@ -158,7 +529,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1916" />
-    <option name="height" value="1058" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -265,7 +636,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,14 +719,18 @@
       <created>1430594172812</created>
       <updated>1430594172812</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add more functions">
+      <created>1430601214109</created>
+      <updated>1430601214109</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1916" height="1058" extended-state="6" />
+    <frame x="0" y="22" width="1916" height="1050" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4089027" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25678498" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33723652" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -395,7 +770,8 @@
     <MESSAGE value="change current player" />
     <MESSAGE value="add current player feature" />
     <MESSAGE value="notificAtions service" />
-    <option name="LAST_COMMIT_MESSAGE" value="notificAtions service" />
+    <MESSAGE value="add more functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -668,32 +1044,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="48" selection-start="644" selection-end="667" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="855">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="105" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/tab-dash.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/sign-in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="543">
           <folding />
         </state>
       </provider>
@@ -741,34 +1094,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tab-games.html">
+    <entry file="file://$PROJECT_DIR$/www/templates/sign-in.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="81" selection-start="1130" selection-end="1148" vertical-scroll-proportion="0.50395256" vertical-offset="30" max-vertical-offset="1350">
-          <folding>
-            <element signature="n#style#0;n#i#0;n#ion-option-button#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#i#0;n#ion-option-button#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#i#0;n#ion-option-button#2;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="24" selection-start="3617" selection-end="3617" vertical-scroll-proportion="0.0" vertical-offset="1672" max-vertical-offset="2340">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="543">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-games.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="38" selection-start="2699" selection-end="2714" vertical-scroll-proportion="-6.6153846" vertical-offset="1088" max-vertical-offset="7680">
+        <state line="46" column="61" selection-start="2480" selection-end="2490" vertical-scroll-proportion="-6.875" vertical-offset="525" max-vertical-offset="1395">
+          <folding>
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430605372000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tab-settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="43" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="840">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="78" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.4777563" vertical-offset="203" max-vertical-offset="2175">
+        <state line="6" column="34" selection-start="299" selection-end="305" vertical-scroll-proportion="-3.4615386" vertical-offset="0" max-vertical-offset="2205">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="31" selection-start="4643" selection-end="4643" vertical-scroll-proportion="-17.076923" vertical-offset="1926" max-vertical-offset="7665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="105" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="40" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.49561402" vertical-offset="36" max-vertical-offset="2385">
           <folding />
         </state>
       </provider>

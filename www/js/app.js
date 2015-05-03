@@ -23,8 +23,11 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
 
   $rootScope.ref = new Firebase("https://bingoz.firebaseio.com/");
   $rootScope.currentUser = $rootScope.ref.getAuth();
+    console.log("This is current user");
+    console.log($rootScope.currentUser);
   //to log out uncomment this line
-  // $rootScope.ref.unauth();
+   $rootScope.ref.unauth();
+
 
   if($rootScope.currentUser && $rootScope.currentUser !== "null" && $rootScope.currentUser !== "undefined"){
       $location.path('/tab/dash');    

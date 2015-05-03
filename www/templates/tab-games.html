@@ -14,7 +14,7 @@
           </div>
           <i class="icon ion-chevron-right icon-accessory"></i>
 
-          <ion-option-button  ng-show="game.createdBy == currentUser.uid" ng-click="game.$remove(game)" class="button-assertive" ng-click="remove(chat)">
+          <ion-option-button  ng-show="game.createdBy == currentUser.uid" ng-click="games.$remove(game)" class="button-assertive" ng-click="remove(chat)">
               <i style="padding-left: 15px;padding-right: 15px"     class="fa fa-trash-o fa-2x"></i>
           </ion-option-button>
           <ion-option-button  ng-click="addMe(game)"  ng-show="showJoinGameButton(game)" ng-click="game.$remove(game)" class="button-positive">
@@ -44,7 +44,10 @@
             <div class="list list-inset">
                 <label class="item item-input">
                     <i class="icon ion-search placeholder-icon"></i>
-
+                    <input  type="text" ng-change="updateName(newGame.name)" ng-model="newGame.name">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
                     <input  type="text" ng-change="updateLocation(newGame.location)" ng-model="newGame.location">
                 </label>
                 <label class="item item-input">
