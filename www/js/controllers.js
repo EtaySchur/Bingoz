@@ -40,13 +40,13 @@
 
 			var players = new Firebase("https://bingoz.firebaseio.com/players");
 			$scope.creatAccount = function(user){
-				$rootScope.showSpinner = true;
+				$scope.showSpinner = true;
 				$rootScope.ref.createUser({
 					email    : user.email,
 					password : user.password
 				}, function(error, userData) {
 					if (error) {
-						$rootScope.showSpinner = false;
+						$scope.showSpinner = false;
 						$rootScope.$digest();
 						console.log("Error creating user:", error);
 					} else {
@@ -59,13 +59,13 @@
 							userNotificationToken: userNotificationToken || "error to get userNotificationToken"
 						},function(error){
 							if(error){
-
+								$scope.showSpinner = false;
 							}else{
 								$rootScope.ref.authWithPassword({
 									email    : user.email,
 									password : user.password
 								}, function(error, authData) {
-									$rootScope.showSpinner = false;
+									$scope.showSpinner = false;
 									$rootScope.$digest();
 									if (error) {
 										console.log("Login Failed!", error);
