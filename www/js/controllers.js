@@ -178,7 +178,6 @@
 
 		.controller('SettingsCtrl', function($rootScope , $scope ,$cordovaCamera , $cordovaImagePicker, $state) {
 			console.log($rootScope.currentPlayer);
-
 			$scope.pickPhoto = function(){
 				var options = {
 					maximumImagesCount: 10,
