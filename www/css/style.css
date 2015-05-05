@@ -111,4 +111,14 @@
   background-size: cover;
   height: 100%;
 }
+.app-gery-bg{
+  background-color: #F1F5F9;
+}
+
+.form-link{
+	display: block;
+	text-align: center;
+	color: #5cb85c;
+}
+
 

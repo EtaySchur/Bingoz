@@ -1,19 +1,27 @@
 		angular.module('starter.controllers', [])
 
-		.controller('SignInCtrl',function ($scope) {
-			$scope.signIn = function(user){
-				$root.showSpinner = true;
-				ref.authWithPassword({
-					email    : user.email,
-					password : user.password
-				}, function(error, authData){
-					$root.showSpinner = false;
-					if (error) {
-						console.log("Login Failed!", error);
-					} else {
-						$location.path('/tab/dash');
-						$rootScope.$digest();
-					}
+		.controller('SignInCtrl',function ($scope, $state,$rootScope) {
+			$scope.signIn = function (user) {
+				$scope.showSpinner = true;
+				$scope.authUser.$authWithPassword({
+					email: user.email,
+					password: user.password
+				}).then(function(authData) {
+					$scope.showSpinner = false;
+					$state.go("tab.dash");
+					console.log("Logged in as:", authData.uid);
+				}).catch(function(error) {
+					$scope.showSpinner = false;
+					console.error("Authentication failed:", error);
+				});
+			}
+
+			$scope.signInWithFB = function(){
+				$rootScope.authUser.$authWithOAuthPopup("facebook").then(function(authData) {
+					console.log("Logged in as:", authData);
+					$state.go("tab.dash");
+				}).catch(function(error) {
+					console.error("Authentication failed:", error);
 				});
 			}
 		})
@@ -22,11 +30,11 @@
 			var userNotificationId, userNotificationToken;
 			document.addEventListener("deviceready", function() {
 				$timeout(function(){
-				window.plugins.OneSignal.init("b725d95c-edd7-11e4-af24-97858152d332",{googleProjectNumber: "857924958148" , autoRegister: true});
-				window.plugins.OneSignal.getIds(function(ids) {
-					userNotificationId = ids.userId;
-					userNotificationToken =  ids.pushToken;
-				});
+					window.plugins.OneSignal.init("b725d95c-edd7-11e4-af24-97858152d332",{googleProjectNumber: "857924958148" , autoRegister: true});
+					window.plugins.OneSignal.getIds(function(ids) {
+						userNotificationId = ids.userId;
+						userNotificationToken =  ids.pushToken;
+					});
 				},300)
 			}, false);
 
@@ -62,7 +70,7 @@
 									if (error) {
 										console.log("Login Failed!", error);
 									} else {
-                                        console.log("")
+										console.log("")
 										$rootScope.currentUser = authData;
 										$location.path('/tab/dash'); 
 										$rootScope.$digest();
@@ -145,12 +153,12 @@
 		.then(function() {
 			$rootScope.players.forEach(function(player){
 				$rootScope.playersKeyArray[player.$id] = player;
-                console.log("playerID"+player.$id);
-                console.log("current Players ID"+$rootScope.currentUser.uid);
+				console.log("playerID"+player.$id);
+				console.log("current Players ID"+$rootScope.currentUser.uid);
 				if(player.$id == $rootScope.currentUser.uid){
 					$rootScope.currentPlayer = player;
-                    console.log("This is THE THE THE current player");
-                    console.log(player);
+					console.log("This is THE THE THE current player");
+					console.log(player);
 
 				}
 			});
@@ -168,7 +176,8 @@
 
 		})
 
-		.controller('SettingsCtrl', function($rootScope , $scope ,$cordovaCamera , $cordovaImagePicker  ) {
+		.controller('SettingsCtrl', function($rootScope , $scope ,$cordovaCamera , $cordovaImagePicker, $state) {
+			console.log($rootScope.currentPlayer);
 
 			$scope.pickPhoto = function(){
 				var options = {
@@ -194,9 +203,6 @@
 					});
 			}
 
-
-
-
 			$scope.upload = function() {
 				var options = {
 					quality: 50,
@@ -217,6 +223,12 @@
 				}, function(error) {
 					console.error(error);
 				});
+			}
+
+			$scope.logOut = function(){
+				console.log($rootScope.currentUser);
+				$rootScope.authUser.$unauth();
+				$state.go("signin");
 			}
 		})
 
@@ -362,28 +374,28 @@
 			}
 
 			$scope.addNewGame = function (){
-                var usersObjectsList = {};
-                $scope.invitedPlayersList.forEach(function(playerId){
-                    usersObjectsList[playerId] = {
-                        attendToCome:false
-                    }
-                });
+				var usersObjectsList = {};
+				$scope.invitedPlayersList.forEach(function(playerId){
+					usersObjectsList[playerId] = {
+						attendToCome:false
+					}
+				});
 
 
-                usersObjectsList[$rootScope.currentUser.uid] = {
-                    attendToCome:true
-                }
+				usersObjectsList[$rootScope.currentUser.uid] = {
+					attendToCome:true
+				}
 
 				$scope.games.$add({
-                    name:$scope.newGame.name,
+					name:$scope.newGame.name,
 					location: $scope.newGame.location,
 					date:($scope.newGame.date).getTime(),
 					createdBy:$rootScope.currentUser.uid,
 					maxPlayers:$scope.newGame.maxPlayers,
 					time:($scope.newGame.time).getTime(),
-                    players:usersObjectsList
+					players:usersObjectsList
 				});
-                Notifications.sendNewGameNotification($scope.newGame , $scope.invitedPlayersNotificationsList , $rootScope.currentPlayer);
+				Notifications.sendNewGameNotification($scope.newGame , $scope.invitedPlayersNotificationsList , $rootScope.currentPlayer);
 
 				$scope.modal.hide();
 			};
@@ -400,75 +412,75 @@
 				$scope.newGame.maxPlayers  = maxPlayers;
 			};
 
-            $scope.updateName = function(name){
-                $scope.newGame.name  = name;
-            };
+			$scope.updateName = function(name){
+				$scope.newGame.name  = name;
+			};
 
 			$scope.removeMe = function (game){
 				for (var key in game.players) {
 					if(key == $rootScope.currentPlayer.$id){
-					    game.players[key].attendToCome = false;
+						game.players[key].attendToCome = false;
 						$scope.games.$save(game);
 					}
 				}
 			};
 
-            $scope.trashGame = function (game){
-                for (var key in game.players) {
-                    if(key == $rootScope.currentPlayer.$id){
-                        delete game.players[key];
-                        $scope.games.$save(game);
-                    }
-                }
-            };
+			$scope.trashGame = function (game){
+				for (var key in game.players) {
+					if(key == $rootScope.currentPlayer.$id){
+						delete game.players[key];
+						$scope.games.$save(game);
+					}
+				}
+			};
 
-            $scope.showGameToCurrentUser = function(game){
-                    console.log("This is Current Player");
-                    console.log($rootScope.currentPlayer);
-                    for (var key in game.players) {
-                        if($rootScope.currentPlayer != undefined){
-                            if(key == $rootScope.currentPlayer.$id){
-                                return true;
-                            }
-                        }
+			$scope.showGameToCurrentUser = function(game){
+				console.log("This is Current Player");
+				console.log($rootScope.currentPlayer);
+				for (var key in game.players) {
+					if($rootScope.currentPlayer != undefined){
+						if(key == $rootScope.currentPlayer.$id){
+							return true;
+						}
+					}
 
-                    }
-                return false;
-            };
+				}
+				return false;
+			};
 
-            $scope.invitePlayer = function(player){
-                console.log("Invting Player");
-                console.log(player);
-                $scope.invitedPlayersList.push(player.$id);
-                $scope.invitedPlayersNotificationsList.push(player.userNotificationId);
-            };
+			$scope.invitePlayer = function(player){
+				console.log("Invting Player");
+				console.log(player);
+				$scope.invitedPlayersList.push(player.$id);
+				$scope.invitedPlayersNotificationsList.push(player.userNotificationId);
+			};
 
-            $scope.unInvitePlayer = function(player){
-                var playerIndex = $scope.invitedPlayersList.indexOf(player.$id);
-                $scope.invitedPlayersList.splice(playerIndex , 1);
-                var notificationIndex = $scope.invitedPlayersNotificationsList.indexOf(player.userNotificationId);
-                $scope.invitedPlayersNotificationsList.splice(notificationIndex , 1);
-            };
+			$scope.unInvitePlayer = function(player){
+				var playerIndex = $scope.invitedPlayersList.indexOf(player.$id);
+				$scope.invitedPlayersList.splice(playerIndex , 1);
+				var notificationIndex = $scope.invitedPlayersNotificationsList.indexOf(player.userNotificationId);
+				$scope.invitedPlayersNotificationsList.splice(notificationIndex , 1);
+			};
 
 			$scope.addMe = function (game){
 				if(game.players == undefined){
 					game.players = {};
 				}
-                console.log(game.players[$rootScope.currentPlayer.$id].attendToCome);
+				console.log(game.players[$rootScope.currentPlayer.$id].attendToCome);
 				game.players[$rootScope.currentPlayer.$id].attendToCome = true;
 
 				$scope.games.$save(game);
-                Notifications.playerJoinGameNotification($rootScope.currentPlayer , game.players);
+				Notifications.playerJoinGameNotification($rootScope.currentPlayer , game.players);
 			};
 
 			$scope.showJoinGameButton = function(game){
-                if(game.players != undefined){
-                    for (var key in game.players) {
-                        if(key == $rootScope.currentPlayer.$id && game.players[key].attendToCome){
-                            return false;
-                        }
-                    }
-                }
+				if(game.players != undefined){
+					for (var key in game.players) {
+						if(key == $rootScope.currentPlayer.$id && game.players[key].attendToCome){
+							return false;
+						}
+					}
+				}
 
 
 				return true;
@@ -482,15 +494,15 @@
 
 			});
 			$scope.openModal = function() {
-                $scope.invitedPlayersNotificationsList = [];
-                $scope.invitedPlayersList = [];
-                console.log($rootScope.players);
+				$scope.invitedPlayersNotificationsList = [];
+				$scope.invitedPlayersList = [];
+				console.log($rootScope.players);
 				$scope.newGame = {
-                    location:"Fuad Place",
-                    date:new Date(),
-                    time:new Date(),
-                    maxPlayers:"7"
-                };
+					location:"Fuad Place",
+					date:new Date(),
+					time:new Date(),
+					maxPlayers:"7"
+				};
 
 				$scope.modal.show();
 			};

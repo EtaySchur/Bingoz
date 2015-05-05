@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controllers', 'starter.services' , 'firebase' , 'ngCordova' ])
 
-.run(function($ionicPlatform, $rootScope, $localstorage, $location) {
+.run(function($ionicPlatform, $rootScope, $localstorage, $location, $state, $firebaseAuth) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -22,16 +22,24 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
   // $rootScope.notificationToken = window.plugins.OneSignal.init("3b17d8f2-ede5-11e4-bd44-df53b0e80d36",{googleProjectNumber: "857924958148"});
 
   $rootScope.ref = new Firebase("https://bingoz.firebaseio.com/");
-  $rootScope.currentUser = $rootScope.ref.getAuth();
-    console.log("This is current user");
-    console.log($rootScope.currentUser);
+  $rootScope.authUser = $firebaseAuth($rootScope.ref);
+  $rootScope.currentUser = $rootScope.authUser.$getAuth();
+    console.log(JSON.stringify($rootScope.currentUser));
   //to log out uncomment this line
-   $rootScope.ref.unauth();
+   // $rootScope.ref.unauth();
 
-
-  if($rootScope.currentUser && $rootScope.currentUser !== "null" && $rootScope.currentUser !== "undefined"){
-      $location.path('/tab/dash');    
-  }
+  $rootScope.authUser.$onAuth(function(authData) {
+    if (authData) {
+      console.log("Logged in as:", authData.uid);
+    } else {
+      console.log("Logged out");
+      $state.go('signin');  
+    }
+  });
+  // if($rootScope.currentUser && $rootScope.currentUser !== "null" && $rootScope.currentUser !== "undefined"){
+  //   console.log("app auth");
+  //     $state.go('signin');    
+  // }
 
 
 })
@@ -125,7 +133,7 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/sign-up');
+  $urlRouterProvider.otherwise('/tab/dash');
 
 });
 
