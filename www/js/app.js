@@ -19,24 +19,33 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
       StatusBar.styleLightContent();
     }
   });
+
+  $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
+  // We can catch the error thrown when the $requireAuth promise is rejected
+  // and redirect the user back to the home page
+  if (error === "AUTH_REQUIRED") {
+    $state.go('signin');  
+  }
+});
+
   // $rootScope.notificationToken = window.plugins.OneSignal.init("3b17d8f2-ede5-11e4-bd44-df53b0e80d36",{googleProjectNumber: "857924958148"});
 
-  $rootScope.ref = new Firebase("https://bingoz.firebaseio.com/");
-  $rootScope.authUser = $firebaseAuth($rootScope.ref);
-  $rootScope.currentUser = $rootScope.authUser.$getAuth();
-    console.log(JSON.stringify($rootScope.currentUser));
-  //to log out uncomment this line
-   // $rootScope.ref.unauth();
+  // $rootScope.ref = new Firebase("https://bingoz.firebaseio.com/");
+  // $rootScope.authUser = $firebaseAuth($rootScope.ref);
+  // $rootScope.currentUser = $rootScope.authUser.$getAuth();
+  //   console.log(JSON.stringify($rootScope.currentUser));
+  // //to log out uncomment this line
+  //  // $rootScope.ref.unauth();
 
-  $rootScope.authUser.$onAuth(function(authData) {
-    if (authData) {
-      console.log("Logged in as:", authData.uid);
-    } else {
-      console.log("Logged out");
-      $state.go('signin');  
-    }
-  });
-  // if($rootScope.currentUser && $rootScope.currentUser !== "null" && $rootScope.currentUser !== "undefined"){
+  // $rootScope.authUser.$onAuth(function(authData) {
+  //   if (authData) {
+  //     console.log("Logged in as:", authData.uid);
+  //   } else {
+  //     console.log("Logged out");
+  //     $state.go('signin');  
+  //   }
+  // });
+  // // if($rootScope.currentUser && $rootScope.currentUser !== "null" && $rootScope.currentUser !== "undefined"){
   //   console.log("app auth");
   //     $state.go('signin');    
   // }
@@ -56,7 +65,12 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
   .state('tab', {
     url: "/tab",
     abstract: true,
-    templateUrl: "templates/tabs.html"
+    templateUrl: "templates/tabs.html",
+    resolve: {
+      "currentAuth": ["Auth", function(Auth) {
+        return Auth.$waitForAuth();
+      }]
+    }
   })
 
   // Each tab has its own nav history stack:
@@ -79,6 +93,11 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
         templateUrl: "templates/tab-settings.html",
         controller: 'SettingsCtrl'
       }
+    },
+    resolve: {
+      "currentAuth": ["Auth", function(Auth) {
+        return Auth.$requireAuth();
+      }]
     }
 
 
@@ -91,6 +110,11 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
         templateUrl: 'templates/tab-dash.html',
         controller: 'DashCtrl'
       }
+    },
+    resolve: {
+      "currentAuth": ["Auth", function(Auth) {
+        return Auth.$requireAuth();
+      }]
     }
   })
 
@@ -101,6 +125,11 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
         templateUrl: 'templates/tab-chats.html',
         controller: 'ChatsCtrl'
       }
+    },
+    resolve: {
+      "currentAuth": ["Auth", function(Auth) {
+        return Auth.$requireAuth();
+      }]
     }
   })
   .state('tab.chat-detail', {
@@ -129,6 +158,11 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
         templateUrl: 'templates/tab-games.html',
         controller: 'GamesCtrl'
       }
+    },
+    resolve: {
+      "currentAuth": ["Auth", function(Auth) {
+        return Auth.$requireAuth();
+      }]
     }
   });
 
@@ -140,22 +174,22 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
 
 app.filter('queryPlayer', function() {
 
-    return function(input, query) {
+  return function(input, query) {
 
-            var out = [];
-        if(query == ''){
-            return out;
-        }else{
-            for (var i = 0; i < input.length; i++){
-                if(query != undefined){
-                    if((input[i].nickName).toLowerCase().indexOf(query.toLowerCase()) > -1 ){
-                        out.push(input[i]);
-                    }
-                }
-
-            }
-            return out;
+    var out = [];
+    if(query == ''){
+      return out;
+    }else{
+      for (var i = 0; i < input.length; i++){
+        if(query != undefined){
+          if((input[i].nickName).toLowerCase().indexOf(query.toLowerCase()) > -1 ){
+            out.push(input[i]);
+          }
         }
 
-    };
+      }
+      return out;
+    }
+
+  };
 });

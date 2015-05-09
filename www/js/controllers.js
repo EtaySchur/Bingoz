@@ -3,13 +3,13 @@
 		.controller('SignInCtrl',function ($scope, $state,$rootScope) {
 			$scope.signIn = function (user) {
 				$scope.showSpinner = true;
-				$scope.authUser.$authWithPassword({
+				$rootScope.authUser.$authWithPassword({
 					email: user.email,
 					password: user.password
 				}).then(function(authData) {
 					$scope.showSpinner = false;
+					console.log("Logged in as:", $rootScope.authUser);
 					$state.go("tab.dash");
-					console.log("Logged in as:", authData.uid);
 				}).catch(function(error) {
 					$scope.showSpinner = false;
 					console.error("Authentication failed:", error);
@@ -86,8 +86,10 @@
 	}
 })
 
-		.controller('MainController', function($scope , $rootScope , $firebaseArray , $cordovaFacebook, $ionicPlatform) {
-			console.log("MAIN CONTROLER");
+		.controller('MainController', function($scope , $rootScope , $firebaseArray , $cordovaFacebook, $ionicPlatform,Auth) {
+			$rootScope.authUser = Auth;
+  			$rootScope.currentUser = $rootScope.authUser.$getAuth();
+  			console.log($rootScope.authUser.$getAuth());
 			var ref = new Firebase("https://bingoz.firebaseio.com/players");
 			$rootScope.players = $firebaseArray(ref);
 			$rootScope.playersKeyArray = {};
