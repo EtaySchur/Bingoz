@@ -242,6 +242,75 @@
 
 		.controller('GameDetailCtrl', function($rootScope , $scope, $stateParams, Chats , $ionicModal  ,$cordovaCamera ) {
 
+			$scope.playersInTable = [
+				{
+					id:0,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"50px",
+					left:"150px"
+				},
+								{
+					id:1,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"80px",
+					left:"225px"
+				},
+								{
+					id:2,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"155px",
+					left:"250px"
+				},
+								{
+					id:3,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"260px",
+					left:"249px"					
+				},
+								{
+					id:4,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"330px",
+					left:"220px"					
+				},
+								{
+					id:5,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"360px",
+					left:"150px"					
+				},
+								{
+					id:6,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"330px",
+					left:"79px"					
+				},
+								{
+					id:7,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"260px",
+					left:"52px"					
+				},
+								{
+					id:8,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"155px",
+					left:"50px"						
+				},
+				{
+					id:9,
+					imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+					top:"80px",
+					left:"70px"						
+				},
+				// {
+				// 	id:10,
+				// 	imgPath: "https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png",
+				// 	top:"128px",
+				// 	left:"77px"						
+				// }
+			];
+
 			$scope.saveMe = function (game){
 				$scope.currentPlayerStats = $scope.game.players[$scope.key];
 				$scope.games.$save(game);
