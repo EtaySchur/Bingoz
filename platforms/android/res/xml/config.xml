@@ -44,7 +44,7 @@
     <author email="hi@ionicframework" href="http://ionicframework.com/">
       Ionic Framework Team
     </author>
-    <content original-src="index.html" src="http://192.168.2.102:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
 </widget>

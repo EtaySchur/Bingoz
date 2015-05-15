@@ -123,7 +123,7 @@
 
 .game-page{
 	background: url(../img/poker_table.jpg) no-repeat center center;
-	background-size: 100%;
+	background-size: cover;
 }
 
 .user-table-avatar-img{

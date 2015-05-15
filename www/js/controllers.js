@@ -26,7 +26,8 @@
 			}
 		})
 
-		.controller('SignUpCtrl', function($scope, $rootScope, $localstorage, $state, $location,$timeout){
+		.controller('SignUpCtrl', function($scope, $rootScope, $localstorage, $state, $location,$timeout, Auth){
+			$rootScope.ref = new Firebase("https://bingoz.firebaseio.com/");
 			var userNotificationId, userNotificationToken;
 			document.addEventListener("deviceready", function() {
 				$timeout(function(){
