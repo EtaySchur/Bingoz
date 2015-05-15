@@ -1,24 +1,30 @@
       <ion-view view-title="Sign-In">
-      <ion-content>
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="user.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="user.password">
-        </label>
-      </div>
-      <div class="padding">
-        <button class="button button-block button-positive" ng-click="signIn(user)">
-          Sign-In
-        </button>
-        <p class="text-center">
-          <a href="#/forgot-password">Forgot password</a>
-        </p>
-      </div>
-      <div class="spinner-overlay" ng-show="$root.showSpinner"></div>
-      <ion-spinner icon="android" class="spinner spinner-android app-spinner" ng-show="$root.showSpinner"></ion-spinner>
+      <ion-content ng-style="{'background-color': '#E6EAEF'}">
+      <form name='signInForm' novalidate class="card">
+        <div class="list list-inset">
+            <label class="item item-input ">
+            <input type='email' name='email' placeholder="Email" ng-model="user.email" required>
+            <span ng-show='registrationForm.email.$error.email'>
+            Email must be valid.
+          </span>
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Password" ng-model="user.password" required>
+          </label>
+        </div>
+        <div class="padding">
+          <button class="button button-block button-balanced" ng-click="signIn(user)">
+            Sign In
+          </button>
+        </div>
+        <div class="padding item app-gery-bg">
+          <button class="button button-block button-positive ion-social-facebook" ng-click="signInWithFB()">
+            Login With Facebook
+          </button>
+            <a ui-sref="signup" class="form-link">sign up</a>
+        </div>
+      </form> 
+      <div class="spinner-overlay" ng-show="showSpinner"></div>
+      <ion-spinner icon="android" class="spinner spinner-android app-spinner" ng-show="showSpinner"></ion-spinner>
     </ion-content>
   </ion-view>

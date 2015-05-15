@@ -10,8 +10,11 @@
             <i class="ion-chevron-right icon ion-funnel"></i>
         </button>
     </ion-nav-buttons>
-    <ion-content class="padding">
-        <div class="list">
+    <ion-content class="padding game-page">
+    <img ng-repeat="player in playersInTable" ng-src="{{player.imgPath}}" class="user-table-avatar-img" ng-style="{'top': player.top, 'left':player.left}">
+<!--     <img src="img/poker_table.jpg"> -->
+   <!--  <div class="game-page"></div> -->
+<!--         <div class="list">
             <a class="item item-icon-left" href="#">
                 <i class="icon ion-ios-location"></i>
                 {{game.location}}
@@ -44,7 +47,7 @@
                     <i ng-show="player.credit_card == true" class="icon ion-card"></i>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </ion-content>
 </ion-view>
