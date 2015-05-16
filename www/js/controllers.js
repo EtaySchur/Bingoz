@@ -462,7 +462,8 @@
 
 
 				usersObjectsList[$rootScope.currentUser.uid] = {
-					attendToCome:true
+					attendToCome:true,
+                    chanceToCome:100
 				}
 
 				$scope.games.$add({
@@ -473,6 +474,7 @@
 					maxPlayers:$scope.newGame.maxPlayers,
 					time:($scope.newGame.time).getTime(),
 					players:usersObjectsList
+
 				});
 				Notifications.sendNewGameNotification($scope.newGame , $scope.invitedPlayersNotificationsList , $rootScope.currentPlayer);
 
@@ -564,6 +566,19 @@
 
 				return true;
 			};
+
+            $ionicModal.fromTemplateUrl('search-players-modal.html', {
+                scope: $scope,
+                animation: 'slide-in-up'
+            }).then(function(modal) {
+                $scope.searchPlayersModal = modal;
+
+            });
+
+            $scope.openSearchPlayersModal = function() {
+                $scope.searchPlayersModal.show();
+            }
+
 
 			$ionicModal.fromTemplateUrl('my-modal.html', {
 				scope: $scope,

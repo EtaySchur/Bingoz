@@ -44,38 +44,33 @@
         <ion-content>
             <div class="list list-inset">
                 <label class="item item-input">
-                    <i class="icon ion-search placeholder-icon"></i>
-                    <input  type="text" ng-change="updateName(newGame.name)" ng-model="newGame.name">
+                    <i class="icon ion-ios-information-empty placeholder-icon"></i>
+                    <input  placeholder="Game's Title" type="text" ng-change="updateName(newGame.name)" ng-model="newGame.name">
                 </label>
                 <label class="item item-input">
-                    <i class="icon ion-search placeholder-icon"></i>
-                    <input  type="text" ng-change="updateLocation(newGame.location)" ng-model="newGame.location">
+                    <i class="icon ion-ios-home-outline placeholder-icon"></i>
+                    <input  placeholder="Game's Locations" type="text" ng-change="updateLocation(newGame.location)" ng-model="newGame.location">
                 </label>
                 <label class="item item-input">
-                    <i class="icon ion-search placeholder-icon"></i>
-                    <input  ng-click="pickDate()"  type="date" ng-model="newGame.date">
+                    <i class="icon ion-ios-calendar-outline placeholder-icon"></i>
+                    <input  placeholder="Game's Date" ng-click="pickDate()"  type="date" ng-model="newGame.date">
                 </label>
                 <label class="item item-input">
-                    <i class="icon ion-search placeholder-icon"></i>
-                    <input  ng-click="pickTime()"  type="time" ng-model="newGame.time">
+                    <i class="ion-ios-clock-outline placeholder-icon"></i>
+                    <input  placeholder="Game's Time" ng-click="pickTime()"  type="time" ng-model="newGame.time">
                 </label>
                 <label class="item item-input">
-                    <i class="icon ion-search placeholder-icon"></i>
-                    <input ng-change="updateMaxPlayers(newGame.maxPlayers)" type="text" ng-model="newGame.maxPlayers" placeholder="Enter Max Number Of Players">
+                    <i class="icon ion-person-stalker placeholder-icon"></i>
+                    <input placeholder="Game's Max Number Of Players" ng-change="updateMaxPlayers(newGame.maxPlayers)" type="text" ng-model="newGame.maxPlayers" placeholder="Enter Max Number Of Players">
                 </label>
-                <h2>Invite Players</h2>
+                <h2>Invited Players
+                <button ng-click="openSearchPlayersModal()" class="button button-positive">
+                    <i class="icon ion-person-add"></i>
+                </button> </h2>
                 <div class="list">
-                    <div class="list list-inset">
-                        <label class="item item-input">
-                            <i class="icon ion-search placeholder-icon"></i>
-                            <input ng-model="query" type="text" placeholder="Search">
-                        </label>
-                    </div>
-                    <a ng-repeat="player in players | queryPlayer:query" class="item item-avatar">
-                        <img ng-src="data:image/jpeg;base64,{{player.image.image}}">
-                        <h2>{{player.nickName}}</h2>
-                        <i ng-show="invitedPlayersList.indexOf(player.$id) == -1" ng-click="invitePlayer(player)" style="padding-left: 15px;padding-right: 15px;float: right"   class="fa fa-plus-circle fa-2x"></i>
-                        <i ng-hide="invitedPlayersList.indexOf(player.$id) == -1" ng-click="unInvitePlayer(player)" style="padding-left: 15px;padding-right: 15px;float: right"   class="fa fa-minus-circle fa-2x"></i>
+                    <a ng-repeat="playerId in invitedPlayersList" class="item item-avatar">
+                       <img ng-src="data:image/jpeg;base64,{{playersKeyArray[playerId].image.image}}">
+                       <p> {{playersKeyArray[playerId].nickName}}</p>
                     </a>
                 </div>
             </div>
@@ -83,6 +78,36 @@
         <ion-footer-bar align-title="left" class="bar-assertive">
 
             <h1 ng-click="addNewGame()" class="title">Add Bingo Game </h1>
+
+        </ion-footer-bar>
+    </ion-modal-view>
+</script>
+
+
+<script id="search-players-modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Invite Players</h1>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input ng-model="query" type="text" placeholder="Search">
+                    </label>
+                </div>
+                <a ng-repeat="player in players | queryPlayer:query" class="item item-avatar">
+                    <img ng-src="data:image/jpeg;base64,{{player.image.image}}">
+                    <h2>{{player.nickName}}</h2>
+                    <i ng-show="invitedPlayersList.indexOf(player.$id) == -1" ng-click="invitePlayer(player)" style="padding-left: 15px;padding-right: 15px;float: right"   class="fa fa-plus-circle fa-2x"></i>
+                    <i ng-hide="invitedPlayersList.indexOf(player.$id) == -1" ng-click="unInvitePlayer(player)" style="padding-left: 15px;padding-right: 15px;float: right"   class="fa fa-minus-circle fa-2x"></i>
+                </a>
+            </div>
+        </ion-content>
+        <ion-footer-bar align-title="left" class="bar-assertive">
+
+            <h1 ng-click="searchPlayersModal.hide()" class="title">Close</h1>
 
         </ion-footer-bar>
     </ion-modal-view>
