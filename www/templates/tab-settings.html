@@ -24,7 +24,7 @@
   <li class="item item-toggle">
     Notifications
      <label class="toggle toggle-balanced">
-       <input type="checkbox" checked="true">
+       <input ng-change="players.$save(currentPlayer)" ng-model="currentPlayer.pushNotifications" type="checkbox">
        <div class="track">
          <div class="handle"></div>
        </div>

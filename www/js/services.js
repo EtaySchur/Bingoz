@@ -8,11 +8,13 @@ angular.module('starter.services', [])
 .factory('Notifications', function($firebaseArray , $http , $rootScope) {
     var appId = "b725d95c-edd7-11e4-af24-97858152d332";
 
+
+    // Helper Function To Get Valid Players Notifications ID's To use in OneSignal
     function getUsersNotificationsIds (players){
         var invitedPlayersIds = [];
         for (var key in players) {
             console.log($rootScope.playersKeyArray[key]);
-            if($rootScope.playersKeyArray[key].userNotificationId != 'error to get userNotificationId'){
+            if($rootScope.playersKeyArray[key].userNotificationId != 'error to get userNotificationId' && $rootScope.playersKeyArray[key].pushNotifications){
                 invitedPlayersIds.push($rootScope.playersKeyArray[key].userNotificationId);
             }
         }

@@ -41,53 +41,61 @@
 
 			var players = new Firebase("https://bingoz.firebaseio.com/players");
 			$scope.creatAccount = function(user){
-				$scope.showSpinner = true;
-				$rootScope.ref.createUser({
-					email    : user.email,
-					password : user.password
-				}, function(error, userData) {
-					if (error) {
-						$scope.showSpinner = false;
-						$rootScope.$digest();
-						console.log("Error creating user:", error);
-					} else {
-						players.child(userData.uid).set({
-							// firstName: user.firstName,
-							// lastName: user.lastName,
-							// fullName: user.firstName+" "+user.lastName,
-							nickName: user.email.replace(/@.*/, ''),
-							userNotificationId: userNotificationId || "error to get userNotificationId",
-							userNotificationToken: userNotificationToken || "error to get userNotificationToken"
-						},function(error){
-							if(error){
-								$scope.showSpinner = false;
-							}else{
-								$rootScope.ref.authWithPassword({
-									email    : user.email,
-									password : user.password
-								}, function(error, authData) {
-									$scope.showSpinner = false;
-									$rootScope.$digest();
-									if (error) {
-										console.log("Login Failed!", error);
-									} else {
-										console.log("")
-										$rootScope.currentUser = authData;
-										$location.path('/tab/dash'); 
-										$rootScope.$digest();
+                if(user.password == user.confirmPassword){
+                    $scope.showSpinner = true;
+                    $rootScope.errors.confirmPassword = false;
+                    $rootScope.ref.createUser({
+                        email    : user.email,
+                        password : user.password
+                    }, function(error, userData) {
+                        if (error) {
+                            $scope.showSpinner = false;
+                            $rootScope.$digest();
+                            console.log("Error creating user:", error);
+                        } else {
+                            players.child(userData.uid).set({
+                                // firstName: user.firstName,
+                                // lastName: user.lastName,
+                                // fullName: user.firstName+" "+user.lastName,
+                                nickName: user.email.replace(/@.*/, ''),
+                                userNotificationId: userNotificationId || "error to get userNotificationId",
+                                userNotificationToken: userNotificationToken || "error to get userNotificationToken",
+                                pushNotifications:true
+                            },function(error){
+                                if(error){
+                                    $scope.showSpinner = false;
+                                }else{
+                                    $rootScope.ref.authWithPassword({
+                                        email    : user.email,
+                                        password : user.password
+                                    }, function(error, authData) {
+                                        $scope.showSpinner = false;
+                                        $rootScope.$digest();
+                                        if (error) {
+                                            console.log("Login Failed!", error);
+                                        } else {
+                                            console.log("")
+                                            $rootScope.currentUser = authData;
+                                            $location.path('/tab/dash');
+                                            $rootScope.$digest();
 
-									}
-								});
+                                        }
+                                    });
 
-							}
-						});
-					}
+                                }
+                            });
+                        }
 
-				});
+                    });
+                }else{
+                    $rootScope.errors.confirmPassword = true;
+                }
+
 	}
 })
 
 		.controller('MainController', function($scope , $rootScope , $firebaseArray , $cordovaFacebook, $ionicPlatform,Auth) {
+            $rootScope.errors = {};
 			$rootScope.authUser = Auth;
   			$rootScope.currentUser = $rootScope.authUser.$getAuth();
   			console.log($rootScope.authUser.$getAuth());
