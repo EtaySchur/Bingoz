@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A66EABE2-16A4-4047-8719-DBAAD0F17B71</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bingoz</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BD36BBD09D14AEEDD38FA88ECFEEF7A68AEA0AF1</key>
+		<string>https://github.com/EtaySchur/Bingoz.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/Bingoz.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BD36BBD09D14AEEDD38FA88ECFEEF7A68AEA0AF1</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/EtaySchur/Bingoz.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BD36BBD09D14AEEDD38FA88ECFEEF7A68AEA0AF1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BD36BBD09D14AEEDD38FA88ECFEEF7A68AEA0AF1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Bingoz</string>
+		</dict>
+	</array>
+</dict>
+</plist>
