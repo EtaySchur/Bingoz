@@ -242,13 +242,137 @@
 			}
 		})
 
-		.controller('ChatsCtrl', function($scope, Chats) {
-			$scope.chats = Chats.all();
-			$scope.remove = function(chat) {
-				Chats.remove(chat);
-			}
-		})
+		.controller('ChatsCtrl', function($rootScope , $scope, $firebaseArray , $ionicModal) {
+                var ref = new Firebase("https://bingoz.firebaseio.com/groups");
+                $rootScope.groups = $firebaseArray(ref);
 
+                $rootScope.groups.$loaded()
+                    .then(function() {
+
+                    })
+                    .catch(function(err) {
+                        console.error(err);
+                    });
+
+                $ionicModal.fromTemplateUrl('add-group-modal.html', {
+                    scope: $scope,
+                    animation: 'slide-in-up'
+                }).then(function(modal) {
+                    $scope.modal = modal;
+
+                });
+
+                $scope.addNewGroup = function(newGroup){
+                    var date = new Date().getTime();
+                    $scope.groups.$add({
+                        name:$scope.newGroup.name,
+                        description:$scope.newGroup.description,
+                        date:date,
+                        createdBy:$rootScope.currentUser.uid,
+                        players:[$rootScope.currentPlayer.$id]
+                    });
+                };
+
+                $scope.updateGroupDescription = function(groupDesc){
+                    $scope.newGroup.description = groupDesc;
+                }
+
+                $scope.updateGroupName = function(groupName){
+                    $scope.newGroup.name = groupName;
+                }
+
+
+                $scope.openModal = function() {
+                    $scope.newGroup = {};
+                    $scope.modal.show();
+                };
+
+                $scope.closeModal = function() {
+                    $scope.modal.hide();
+                };
+                //Cleanup the modal when we're done with it!
+                $scope.$on('$destroy', function() {
+                    $scope.modal.remove();
+                });
+		})
+            .controller('GroupDetailCtrl', function($scope, $rootScope , $stateParams , $ionicModal , Notifications) {
+
+                var groupId = $stateParams.groupId;
+                $rootScope.groups.forEach(function(group){
+                    if(group.$id == groupId){
+                        $scope.currentGroup = group;
+                        console.log("this is my group");
+                        console.log($scope.currentGroup);
+                    }
+                });
+
+                $scope.updateMessage = function(text){
+                    $scope.messageText = text;
+                }
+
+                $scope.updatePlayer = function(player , isChecked){
+                    if(isChecked){
+                        $scope.selectedPlayers.push(player);
+                    }else{
+                        var index = $scope.selectedPlayers.indexOf(player);
+                        $scope.selectedPlayers.splice(index , 1 );
+                    }
+                }
+
+                $scope.sendMessage = function(){
+                    if($scope.currentGroup.messages == undefined){
+                        $scope.currentGroup.messages = []
+                    }
+
+                    var newMessage = {
+                        user:$rootScope.currentPlayer,
+                        text:$scope.messageText
+                    }
+
+                    $scope.currentGroup.messages.push(newMessage);
+                    $rootScope.groups.$save($scope.currentGroup);
+
+                    $scope.messageText = '';
+
+                }
+
+                $scope.addNewPlayersToGroup = function(){
+                    var usersNotificationsIds = [];
+                    $scope.selectedPlayers.forEach(function(player){
+                        usersNotificationsIds.push(player.userNotificationId);
+                        $scope.currentGroup.players.push(player.$id);
+                    });
+
+                    Notifications.sendGroupInviteNotification($scope.currentGroup.name , usersNotificationsIds , $rootScope.currentPlayer);
+                    $rootScope.groups.$save($scope.currentGroup);
+                    $scope.modal.hide();
+                }
+
+                $ionicModal.fromTemplateUrl('add-group-players-modal.html', {
+                    scope: $scope,
+                    animation: 'slide-in-up'
+                }).then(function(modal) {
+                    $scope.modal = modal;
+
+                });
+
+
+                $scope.openModal = function() {
+                    $scope.selectedPlayers = [];
+                    $scope.modal.show();
+                };
+
+                $scope.closeModal = function() {
+                    $scope.modal.hide();
+                };
+                //Cleanup the modal when we're done with it!
+                $scope.$on('$destroy', function() {
+                    $scope.modal.remove();
+                });
+
+
+
+            })
 		.controller('GameDetailCtrl', function($rootScope , $scope, $stateParams, Chats , $ionicModal  ,$cordovaCamera ) {
 
 			$scope.playersInTable = [
@@ -515,9 +639,12 @@
 				}
 			};
 
+            $scope.showGroupToCurrentUser = function(group){
+                console.log(group);
+                return false;
+            };
+
 			$scope.showGameToCurrentUser = function(game){
-				console.log("This is Current Player");
-				console.log($rootScope.currentPlayer);
 				for (var key in game.players) {
 					if($rootScope.currentPlayer != undefined){
 						if(key == $rootScope.currentPlayer.$id){

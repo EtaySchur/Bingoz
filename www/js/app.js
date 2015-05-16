@@ -122,7 +122,7 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
     url: '/chats',
     views: {
       'tab-chats': {
-        templateUrl: 'templates/tab-chats.html',
+        templateUrl: 'templates/tab-groups.html',
         controller: 'ChatsCtrl'
       }
     },
@@ -133,11 +133,11 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
     }
   })
   .state('tab.chat-detail', {
-    url: '/chats/:chatId',
+    url: '/chats/:groupId',
     views: {
       'tab-chats': {
         templateUrl: 'templates/chat-detail.html',
-        controller: 'ChatDetailCtrl'
+        controller: 'GroupDetailCtrl'
       }
     }
   })
