@@ -7,7 +7,7 @@
 <ion-view view-title="{{currentGroup.name}} - {{currentGroup.description}}">
     <ion-nav-buttons side="right">
         <button class="button" ng-click="openModal($event)">
-            <i class="icon ion-android-person-add"></i>
+            <i ng-show="currentGroup.createdBy == currentPlayer.$id" class="icon ion-android-person-add"></i>
         </button>
     </ion-nav-buttons>
     <ion-content class="padding">

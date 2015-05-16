@@ -63,10 +63,18 @@
                     <i class="icon ion-person-stalker placeholder-icon"></i>
                     <input placeholder="Game's Max Number Of Players" ng-change="updateMaxPlayers(newGame.maxPlayers)" type="text" ng-model="newGame.maxPlayers" placeholder="Enter Max Number Of Players">
                 </label>
-                <h2>Invited Players
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Invite Group
+                    </div>
+                    <select   ng-change="updateInvitedGroup(groupId)" ng-model="groupId">
+                        <option ng-repeat="group in currentPlayerGroups" ng-value="group.$id">{{group.name}}</option>
+                    </select>
+                </label>
+                <!--h2>Invited Players
                 <button ng-click="openSearchPlayersModal()" class="button button-positive">
                     <i class="icon ion-person-add"></i>
-                </button> </h2>
+                </button> </h2-->
                 <div class="list">
                     <a ng-repeat="playerId in invitedPlayersList" class="item item-avatar">
                        <img ng-src="data:image/jpeg;base64,{{playersKeyArray[playerId].image.image}}">
