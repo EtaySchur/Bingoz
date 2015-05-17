@@ -6,8 +6,11 @@
 -->
 <ion-view view-title="Game Info">
     <ion-nav-buttons side="right">
-        <button class="button" ng-click="openModal($event)">
+        <button ng-show="game.players[currentPlayer.$id].attendToCome" class="button" ng-click="openModal($event)">
             <i class="ion-chevron-right icon ion-funnel"></i>
+        </button>
+        <button ng-hide="game.players[currentPlayer.$id].attendToCome" class="button" ng-click="addMeToThisGame(game)">
+            <i class="icon ion-chevron-right ion-ios-plus-outline"></i>
         </button>
     </ion-nav-buttons>
     <ion-content class="padding game-page">
@@ -80,7 +83,7 @@
                 <ul class="list">
 
                     <li>
-                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].suitcase">Suitcase<i  style="float: right" class="fa fa-suitcase fa-2x"></i></ion-checkbox>
+                        <ion-checkbox ng-click="updateGroup(game.players[key].suitcase , 'suitcase')" ng-change="games.$save(game)" ng-model="game.players[key].suitcase">Suitcase<i  style="float: right" class="fa fa-suitcase fa-2x"></i></ion-checkbox>
                     </li>
                     <li>
                         <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].gift">Surprise<i  style="float: right" class="fa fa-gift fa-2x"></i></ion-checkbox>

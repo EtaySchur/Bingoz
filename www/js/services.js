@@ -67,7 +67,7 @@ angular.module('starter.services', [])
             var invitedPlayersIds = [];
             for (var key in players) {
                 console.log($rootScope.playersKeyArray[key]);
-                if ($rootScope.playersKeyArray[key].userNotificationId != 'error to get userNotificationId' && $rootScope.playersKeyArray[key].pushNotifications) {
+                if ($rootScope.playersKeyArray[key].userNotificationId != 'error to get userNotificationId' && $rootScope.playersKeyArray[key].pushNotifications != false) {
                     invitedPlayersIds.push($rootScope.playersKeyArray[key].userNotificationId);
                 }
             }
@@ -129,7 +129,8 @@ angular.module('starter.services', [])
             },
             playerJoinGameNotification: function (currentUser, invitedPlayers) {
                 var invitedPlayersIds = getUsersNotificationsIds(invitedPlayers);
-
+                console.log("INvite");
+                console.log(invitedPlayersIds);
                 var data = {
                     "app_id": appId,
                     "include_player_ids": invitedPlayersIds,

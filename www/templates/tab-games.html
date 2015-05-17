@@ -15,13 +15,13 @@
           </div>
           <i class="icon ion-chevron-right icon-accessory"></i>
 
-          <ion-option-button  ng-show="game.createdBy == currentUser.uid" ng-click="games.$remove(game)" class="button-assertive" ng-click="remove(chat)">
+          <ion-option-button  ng-show="game.createdBy == currentUser.uid" ng-click="games.$remove(game)" class="button-assertive">
               <i style="padding-left: 15px;padding-right: 15px"     class="fa fa-trash-o fa-2x"></i>
           </ion-option-button>
-          <ion-option-button  ng-click="addMe(game)"  ng-show="showJoinGameButton(game)" ng-click="game.$remove(game)" class="button-positive">
+          <ion-option-button  ng-click="addMe(game)"  ng-show="showJoinGameButton(game)"  class="button-positive">
               <i      style="padding-left: 15px;padding-right: 15px"   class="fa fa-plus-circle fa-2x"></i>
           </ion-option-button>
-          <ion-option-button ng-click="removeMe(game)"    ng-hide="showJoinGameButton(game) || game.createdBy == currentUser.uid" ng-click="game.$remove(game)" class="button-positive">
+          <ion-option-button ng-click="removeMe(game)"    ng-hide="showJoinGameButton(game) || game.createdBy == currentUser.uid"  class="button-positive">
               <i     style="padding-left: 15px;padding-right: 15px" class="fa fa-minus-circle fa-2x"></i>
           </ion-option-button>
       </ion-item>

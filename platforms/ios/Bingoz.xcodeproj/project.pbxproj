@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		0EC6D951D6CD4A67B05D364B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1003906E908D43669C273632 /* SystemConfiguration.framework */; };
 		10FD04AD745442EDA0C51E88 /* OneSignalJailbreakDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B52BC48D8DD42D1898F37CB /* OneSignalJailbreakDetection.m */; };
@@ -35,6 +36,7 @@
 		30C1856619D5FC0A00212699 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C1856519D5FC0A00212699 /* icon-60@3x.png */; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
+		5F65AA948D3048DCA83DA564 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A4008877394C15832A70EA /* DatePicker.m */; };
 		71C774150F8542B8A12F1929 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B0135CDD9345F793C3B0FC /* CDVDevice.m */; };
 		7E7966DE1810823500FA85AD /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D41810823500FA85AD /* icon-40.png */; };
 		7E7966DF1810823500FA85AD /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D51810823500FA85AD /* icon-40@2x.png */; };
@@ -49,11 +51,10 @@
 		8BD2D0706A2743B8BBE4A87A /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C879036F16A4E2EA3ACA0DF /* CDVCamera.m */; };
 		96BE10EC69904616B506535F /* OneSignalTrackIAP.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7FB915A7D1498A87E6D986 /* OneSignalTrackIAP.m */; };
 		B1A3F23D13DD49759D506A0B /* OneSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C3ED4AEC840FBBFAD4A11 /* OneSignal.m */; };
+		D496981C14AA47E29A5889E0 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81029BCC40F24774B4B2E932 /* DatePicker.xib */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		DEF1CB460D5245138837CA32 /* OneSignalHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A8C8D543E64BC5B3F2522A /* OneSignalHTTPClient.m */; };
 		E25DB2DBE65148F48102255B /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E1E1BCC4674DD3A753A753 /* CDVJpegHeaderWriter.m */; };
-		5F65AA948D3048DCA83DA564 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A4008877394C15832A70EA /* DatePicker.m */; };
-		D496981C14AA47E29A5889E0 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81029BCC40F24774B4B2E932 /* DatePicker.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		030977DE12E8446CA5FAF219 /* OneSignalJailbreakDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneSignalJailbreakDetection.h; path = com.onesignal.plugins.OneSignal/OneSignalJailbreakDetection.h; sourceTree = "<group>"; };
 		044C3ED4AEC840FBBFAD4A11 /* OneSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneSignal.m; path = com.onesignal.plugins.OneSignal/OneSignal.m; sourceTree = "<group>"; };
+		08A4008877394C15832A70EA /* DatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatePicker.m; path = com.plugin.datepicker/DatePicker.m; sourceTree = "<group>"; };
 		1003906E908D43669C273632 /* SystemConfiguration.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		14DE0A6707E1413FB4C51256 /* OneSignalPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneSignalPush.h; path = com.onesignal.plugins.OneSignal/OneSignalPush.h; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		7E7966DB1810823500FA85AD /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76@2x.png"; sourceTree = "<group>"; };
 		7E7966DC1810823500FA85AD /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
 		7E7966DD1810823500FA85AD /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
+		81029BCC40F24774B4B2E932 /* DatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
 		8C6058DA0D3D46699FF54127 /* ImageIO.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Bingoz-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Bingoz-Info.plist"; path = "../Bingoz-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		928AD9774FBD47D98A5608DA /* OneSignalHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneSignalHTTPClient.h; path = com.onesignal.plugins.OneSignal/OneSignalHTTPClient.h; sourceTree = "<group>"; };
@@ -140,10 +143,8 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Bingoz/config.xml; sourceTree = "<group>"; };
+		FAB758FED81441F0B9FC6DAB /* DatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatePicker.h; path = com.plugin.datepicker/DatePicker.h; sourceTree = "<group>"; };
 		FFB5B9820B4C44CC939E4002 /* UIImage+CropScaleOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropScaleOrientation.h"; path = "org.apache.cordova.camera/UIImage+CropScaleOrientation.h"; sourceTree = "<group>"; };
-		08A4008877394C15832A70EA /* DatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DatePicker.m"; path = "com.plugin.datepicker/DatePicker.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		FAB758FED81441F0B9FC6DAB /* DatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DatePicker.h"; path = "com.plugin.datepicker/DatePicker.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		81029BCC40F24774B4B2E932 /* DatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "DatePicker.xib"; path = "DatePicker.xib"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -501,7 +502,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "Bingoz/Bingoz-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					CoreFoundation,
@@ -532,7 +533,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "Bingoz/Bingoz-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					CoreFoundation,

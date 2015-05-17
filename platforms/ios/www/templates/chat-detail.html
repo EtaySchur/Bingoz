@@ -4,11 +4,62 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{chat.name}}">
-  <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chat.lastText}}
-    </p>
-  </ion-content>
+<ion-view view-title="{{currentGroup.name}} - {{currentGroup.description}}">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="openModal($event)">
+            <i ng-show="currentGroup.createdBy == currentPlayer.$id" class="icon ion-android-person-add"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="list">
+
+            <a ng-repeat="message in currentGroup.messages" class="item item-avatar">
+                <img ng-src="data:image/jpeg;base64,{{message.user.image.image}}">
+                <h2>{{message.user.nickName}}</h2>
+                <p>{{message.text}}</p>
+            </a>
+        </div>
+    </ion-content>
+    <ion-footer-bar  class="bar-positive">
+        <label style="width: 100%" class="item item-input">
+            <i style="margin-right: 10px" class="fa fa-pencil-square-o"></i>
+            <input  ng-change="updateMessage(messageText)" ng-model="messageText" type="text">
+        </label>
+        <button ng-click="sendMessage()" style="margin-left: 20px;padding-right: 10px" class="button button-small">
+            <i style="padding-left: 15px;padding-right: 15px" class="fa fa-paper-plane-o"></i>
+        </button>
+    </ion-footer-bar>
 </ion-view>
+<script id="add-group-players-modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Add Group</h1>
+            <button ng-click="closeModal()" class="button">
+                <i  class="ion-chevron-right icon ion-close-round"></i>
+            </button>
+        </ion-header-bar>
+        <ion-content>
+
+
+            <ul class="list">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <input ng-model="query" type="text" placeholder="Search For Player Name">
+                    </label>
+                </div>
+                <li ng-repeat="player in players | queryPlayer:query">
+                    <ion-checkbox ng-change="updatePlayer(player , isChecked)" ng-model="isChecked">{{player.nickName}}</ion-checkbox>
+                </li>
+                <li ng-repeat="selectedPlayer in selectedPlayers">
+                    {{selectedPlayer.nickName}}
+                </li>
+
+            </ul>
+        </ion-content>
+        <ion-footer-bar align-title="left" class="bar-positive">
+
+            <h1 ng-click="addNewPlayersToGroup()" class="title">Add Players</h1>
+
+        </ion-footer-bar>
+    </ion-modal-view>
+</script>

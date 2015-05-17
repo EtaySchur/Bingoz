@@ -321,7 +321,8 @@ angular.module('starter.controllers', [])
 
             var newMessage = {
                 user: $rootScope.currentPlayer,
-                text: $scope.messageText
+                text: $scope.messageText,
+                date: new Date()
             }
 
             $scope.currentGroup.messages.push(newMessage);
@@ -367,7 +368,7 @@ angular.module('starter.controllers', [])
 
 
     })
-    .controller('GameDetailCtrl', function ($rootScope, $scope, $stateParams, Chats, $ionicModal, $cordovaCamera) {
+    .controller('GameDetailCtrl', function ($rootScope, $scope, $stateParams, Chats, $ionicModal, $cordovaCamera , Groups , Notifications) {
 
         $scope.playersInTable = [
             {
@@ -443,13 +444,32 @@ angular.module('starter.controllers', [])
             $scope.games.$save(game);
         }
 
+        $scope.addMeToThisGame = function (game) {
+            if (game.players == undefined) {
+                game.players = {};
+            }
+            console.log(game.players[$rootScope.currentPlayer.$id].attendToCome);
+            game.players[$rootScope.currentPlayer.$id].attendToCome = true;
+            var string = $rootScope.currentPlayer.nickName+" Has Joined The Game "+game.name;
+            var newMessage = {
+                user: "System Alert",
+                text: string,
+                date: new Date()
+            }
+            $scope.currentGroup.messages.push(newMessage);
+            $scope.groups.$save($scope.currentGroup);
+
+
+            $scope.games.$save(game);
+            Notifications.playerJoinGameNotification($rootScope.currentPlayer, game.players);
+        };
+
         $scope.classMe = function () {
             function apply() {
                 $scope.$apply();
             }
 
 
-            console.log($scope.game.players[$scope.key].chanceToCome);
             if ($scope.game.players[$scope.key].chanceToCome <= 30) {
 
                 $scope.barColor = 'range-assertive';
@@ -464,6 +484,21 @@ angular.module('starter.controllers', [])
 
         }
 
+        $scope.updateGroup = function(value , item){
+            if(value){
+                var string = $rootScope.currentPlayer.nickName+" Will Bring "+item+" With Him";
+            }else{
+                var string = $rootScope.currentPlayer.nickName+" WONT Bring "+item+" With Him ( Sharmit )";
+            }
+            var newMessage = {
+                user: "System Alert",
+                text: string,
+                date: new Date()
+            }
+            $scope.currentGroup.messages.push(newMessage);
+            $scope.groups.$save($scope.currentGroup);
+        }
+
 
         $scope.games = (Chats.getGames());
         $scope.games.$loaded()
@@ -471,6 +506,15 @@ angular.module('starter.controllers', [])
                 $scope.games.forEach(function (game) {
                     if (game.$id == $stateParams.gameId) {
                         $scope.game = game;
+                        Groups.getGroups().then(function (data) {
+                            $scope.groups = data;
+                            for (var i = 0; i < $scope.groups.length; i++) {
+                                if ($scope.groups[i].$id == game.groupId) {
+                                    $scope.currentGroup = $scope.groups[i];
+
+                                }
+                            }
+                        });
                         if (game.players != undefined) {
                             for (var key in game.players) {
                                 if (key == $rootScope.currentPlayer.$id) {
@@ -586,14 +630,9 @@ angular.module('starter.controllers', [])
                     $scope.newGame.group = angular.copy(group);
                 }
             });
-            console.log("my group");
-            console.log($scope.newGame.group);
-
 
             // Add Players Group Info
             $scope.newGame.group.players.forEach(function (playerId) {
-                console.log("player");
-                console.log(playerId);
                 usersObjectsList[playerId] = {
                     attendToCome: false
                 }
@@ -609,7 +648,7 @@ angular.module('starter.controllers', [])
             }
 
 
-            console.log(usersObjectsList);
+
             $scope.games.$add({
                 name: $scope.newGame.name,
                 location: $scope.newGame.location,
@@ -617,10 +656,14 @@ angular.module('starter.controllers', [])
                 createdBy: $rootScope.currentUser.uid,
                 maxPlayers: $scope.newGame.maxPlayers,
                 time: ($scope.newGame.time).getTime(),
-                players: usersObjectsList
+                players: usersObjectsList,
+                groupId:$scope.newGame.group.$id
 
             });
+
+            // Send Notifications To Users
             Notifications.sendNewGameNotification($scope.newGame, usersNotificationsIdsList , $rootScope.currentPlayer);
+
 
             $scope.modal.hide();
         };
