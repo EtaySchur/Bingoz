@@ -625,7 +625,7 @@ angular.module('starter.controllers', [])
             });
         });
 
-        $cordovaDialogs.confirm('message', 'title', ['button 1','button 2'])
+        $cordovaDialogs.confirm('Are You Sure', 'title', ['button 1','button 2'])
             .then(function(buttonIndex) {
                 // no button = 0, 'OK' = 1, 'Cancel' = 2
                 var btnIndex = buttonIndex;
