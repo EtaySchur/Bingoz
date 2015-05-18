@@ -107,7 +107,7 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
     url: '/dash',
     views: {
       'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
+        templateUrl: 'templates/sidemenu.html',
         controller: 'DashCtrl'
       }
     },
@@ -145,7 +145,7 @@ var app = angular.module('starter', ['ionic', 'ionic.utils', 'starter.controller
     url: '/games/:gameId',
     views: {
       'tab-account': {
-        templateUrl: 'templates/game-detail.html',
+        templateUrl: 'templates/game-detail-old.html',
         controller: 'GameDetailCtrl'
       }
     }
@@ -192,4 +192,33 @@ app.filter('queryPlayer', function() {
     }
 
   };
+});
+
+app.filter('toArray', function() { return function(obj) {
+    if (!(obj instanceof Object)) return obj;
+    return _.map(obj, function(val, key) {
+        return Object.defineProperty(val, '$key', {__proto__: null, value: key});
+    });
+}});
+
+
+app.filter('orderObjectBy', function() {
+    return function(items, field, reverse) {
+
+        var filtered = [];
+        angular.forEach(items, function(item) {
+
+            filtered.push(item);
+        });
+        filtered.sort(function (a, b) {
+            if(a[field] == undefined)
+                a[field] = 0;
+            if(b[field] == undefined)
+                b[field] = 0;
+
+            return (a[field] > b[field] ? 1 : -1);
+        });
+        if(reverse) filtered.reverse();
+        return filtered;
+    };
 });

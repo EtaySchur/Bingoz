@@ -48,6 +48,31 @@ module.exports = [
         "clobbers": [
             "datePicker"
         ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.toast/www/Toast.js",
+        "id": "nl.x-services.plugins.toast.Toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.toast/test/tests.js",
+        "id": "nl.x-services.plugins.toast.tests"
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "id": "cordova-plugin-dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+        "id": "cordova-plugin-dialogs.notification_android",
+        "merges": [
+            "navigator.notification"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -57,6 +82,8 @@ module.exports.metadata =
     "org.apache.cordova.camera": "0.3.6",
     "org.apache.cordova.device": "0.3.0",
     "com.plugin.datepicker": "0.6.0",
+    "nl.x-services.plugins.toast": "2.0.5",
+    "cordova-plugin-dialogs": "1.1.1-dev",
     "android.support.v4": "21.0.1",
     "com.google.playservices": "21.0.0"
 }

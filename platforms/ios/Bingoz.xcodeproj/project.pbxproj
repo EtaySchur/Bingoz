@@ -54,6 +54,12 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		DEF1CB460D5245138837CA32 /* OneSignalHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A8C8D543E64BC5B3F2522A /* OneSignalHTTPClient.m */; };
 		E25DB2DBE65148F48102255B /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E1E1BCC4674DD3A753A753 /* CDVJpegHeaderWriter.m */; };
+		6F2298141D734F56B723AFCD /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 870BAFD26158411BA03B6552 /* Toast+UIView.m */; };
+		D14D83D016BB42AF9AAA9635 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 08510CF2A53742C6BAFF0E9E /* Toast.m */; };
+		FCF7DF025A714076AB88E6E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D71075AECAC4684AC133854 /* QuartzCore.framework */; };
+		D2082448026F4913B876745E /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1680E8A1FEAE4F108E41CA4E /* CDVNotification.m */; };
+		11CA33E140224B5A8954DA62 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 941C7009F45940D7AA4E0CB1 /* CDVNotification.bundle */; };
+		7D9289CF61B0498D91336319 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A54775C759D491A96ABD6FC /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +150,15 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Bingoz/config.xml; sourceTree = "<group>"; };
 		FAB758FED81441F0B9FC6DAB /* DatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatePicker.h; path = com.plugin.datepicker/DatePicker.h; sourceTree = "<group>"; };
 		FFB5B9820B4C44CC939E4002 /* UIImage+CropScaleOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropScaleOrientation.h"; path = "org.apache.cordova.camera/UIImage+CropScaleOrientation.h"; sourceTree = "<group>"; };
+		870BAFD26158411BA03B6552 /* Toast+UIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Toast+UIView.m"; path = "nl.x-services.plugins.toast/Toast+UIView.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		08510CF2A53742C6BAFF0E9E /* Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Toast.m"; path = "nl.x-services.plugins.toast/Toast.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		90334720E00E4C28B61C6E99 /* Toast+UIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Toast+UIView.h"; path = "nl.x-services.plugins.toast/Toast+UIView.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		29AB931222DE41FBB0A6B7C0 /* Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Toast.h"; path = "nl.x-services.plugins.toast/Toast.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		5D71075AECAC4684AC133854 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		1680E8A1FEAE4F108E41CA4E /* CDVNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVNotification.m"; path = "cordova-plugin-dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		B0D9436247204DEC98D56F5C /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		941C7009F45940D7AA4E0CB1 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
+		9A54775C759D491A96ABD6FC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +173,8 @@
 				0EC6D951D6CD4A67B05D364B /* SystemConfiguration.framework in Frameworks */,
 				11B574E6C1C34C2994C9E9ED /* ImageIO.framework in Frameworks */,
 				22DBE46D955F4991B5541C06 /* CoreLocation.framework in Frameworks */,
+				FCF7DF025A714076AB88E6E7 /* QuartzCore.framework in Frameworks */,
+				7D9289CF61B0498D91336319 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +237,7 @@
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* Bingoz-Info.plist */,
 				81029BCC40F24774B4B2E932 /* DatePicker.xib */,
+				941C7009F45940D7AA4E0CB1 /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = Bingoz/Resources;
@@ -234,6 +252,8 @@
 				1003906E908D43669C273632 /* SystemConfiguration.framework */,
 				8C6058DA0D3D46699FF54127 /* ImageIO.framework */,
 				B4BC6D54E321410480CE0CF2 /* CoreLocation.framework */,
+				5D71075AECAC4684AC133854 /* QuartzCore.framework */,
+				9A54775C759D491A96ABD6FC /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,6 +292,12 @@
 				C8265F4C253F40E19AF9624E /* CDVDevice.h */,
 				08A4008877394C15832A70EA /* DatePicker.m */,
 				FAB758FED81441F0B9FC6DAB /* DatePicker.h */,
+				870BAFD26158411BA03B6552 /* Toast+UIView.m */,
+				08510CF2A53742C6BAFF0E9E /* Toast.m */,
+				90334720E00E4C28B61C6E99 /* Toast+UIView.h */,
+				29AB931222DE41FBB0A6B7C0 /* Toast.h */,
+				1680E8A1FEAE4F108E41CA4E /* CDVNotification.m */,
+				B0D9436247204DEC98D56F5C /* CDVNotification.h */,
 			);
 			name = Plugins;
 			path = Bingoz/Plugins;
@@ -431,6 +457,7 @@
 				7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 				D496981C14AA47E29A5889E0 /* DatePicker.xib in Resources */,
+				11CA33E140224B5A8954DA62 /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +500,9 @@
 				E25DB2DBE65148F48102255B /* CDVJpegHeaderWriter.m in Sources */,
 				71C774150F8542B8A12F1929 /* CDVDevice.m in Sources */,
 				5F65AA948D3048DCA83DA564 /* DatePicker.m in Sources */,
+				6F2298141D734F56B723AFCD /* Toast+UIView.m in Sources */,
+				D14D83D016BB42AF9AAA9635 /* Toast.m in Sources */,
+				D2082448026F4913B876745E /* CDVNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

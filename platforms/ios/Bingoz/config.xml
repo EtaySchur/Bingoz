@@ -27,6 +27,12 @@
     <feature name="DatePicker">
         <param name="ios-package" value="DatePicker" />
     </feature>
+    <feature name="Toast">
+        <param name="ios-package" value="Toast" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />
     <icon height="114" src="resources/ios/icon/icon@2x.png" width="114" />
     <icon height="40" src="resources/ios/icon/icon-40.png" width="40" />

@@ -611,7 +611,7 @@ angular.module('starter.controllers', [])
 
     })
 
-    .controller('GamesCtrl', function ($rootScope, $scope, $firebaseArray, $ionicModal, $rootScope, $cordovaDatePicker, $http, Notifications, Groups) {
+    .controller('GamesCtrl', function ($rootScope, $scope, $firebaseArray, $ionicModal, $rootScope, $cordovaDatePicker, $http, Notifications, Groups , $cordovaDialogs) {
 
         Groups.getGroups().then(function (data) {
             $scope.groups = data;
@@ -624,6 +624,13 @@ angular.module('starter.controllers', [])
                 }
             });
         });
+
+        $cordovaDialogs.confirm('message', 'title', ['button 1','button 2'])
+            .then(function(buttonIndex) {
+                // no button = 0, 'OK' = 1, 'Cancel' = 2
+                var btnIndex = buttonIndex;
+                console.log(btnIndex);
+            });
 
 
         var dateOptions = {

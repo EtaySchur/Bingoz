@@ -1,0 +1,49 @@
+<ion-view view-title="Groups">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="openModal($event)">
+            <i class="ion-chevron-right icon ion-ios-plus-empty"></i>
+        </button>
+    </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-show="group.players.indexOf(currentPlayer.$id) != -1" class="item-remove-animate item-avatar item-icon-right" ng-repeat="group in groups" type="item-text-wrap" href="#/tab/chats/{{group.$id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{group.name}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+
+<script id="add-group-modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Add Group</h1>
+            <button ng-click="closeModal()" class="button">
+                <i  class="ion-chevron-right icon ion-close-round"></i>
+            </button>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Group Name</span>
+                    <input ng-change="updateGroupName(newGroup.name)" ng-model="newGroup.name" type="text">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Group Description</span>
+                    <input ng-change="updateGroupDescription(newGroup.description)" ng-model="newGroup.description" type="text">
+                </label>
+            </div>
+        </ion-content>
+        <ion-footer-bar align-title="left" class="bar-positive">
+
+            <h1 ng-click="addNewGroup(newGroup)" class="title">Add Group</h1>
+
+        </ion-footer-bar>
+    </ion-modal-view>
+    </script>

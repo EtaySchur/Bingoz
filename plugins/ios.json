@@ -42,6 +42,18 @@
                             "xml": false,
                             "count": 1
                         }
+                    ],
+                    "QuartzCore.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
                     ]
                 }
             },
@@ -66,6 +78,14 @@
                         },
                         {
                             "xml": "<feature name=\"DatePicker\"><param name=\"ios-package\" value=\"DatePicker\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Toast\"><param name=\"ios-package\" value=\"Toast\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -106,6 +126,12 @@
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "com.plugin.datepicker": {
+            "PACKAGE_NAME": "com.fuadfuad.bingoz"
+        },
+        "nl.x-services.plugins.toast": {
+            "PACKAGE_NAME": "com.fuadfuad.bingoz"
+        },
+        "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "com.fuadfuad.bingoz"
         }
     },

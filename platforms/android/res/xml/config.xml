@@ -47,4 +47,10 @@
     <content src="index.html" />
     <access origin="*" />
     <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
+    <feature name="Toast">
+        <param name="android-package" value="nl.xservices.plugins.Toast" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
 </widget>

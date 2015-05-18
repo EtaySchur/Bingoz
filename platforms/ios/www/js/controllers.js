@@ -368,7 +368,73 @@ angular.module('starter.controllers', [])
 
 
     })
-    .controller('GameDetailCtrl', function ($rootScope, $scope, $stateParams, Chats, $ionicModal, $cordovaCamera , Groups , Notifications) {
+    .controller('GameDetailCtrl', function ($rootScope, $scope, $stateParams, Chats, $ionicModal, $cordovaCamera , Groups , Notifications , $ionicPopover) {
+
+        $ionicPopover.fromTemplateUrl('game-action-popover.html', {
+            scope: $scope
+        }).then(function(popover) {
+            $scope.popover = popover;
+        });
+
+
+
+        $ionicModal.fromTemplateUrl('player_stuff.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function (modal) {
+            $scope.modal = modal;
+
+        });
+
+
+        $ionicModal.fromTemplateUrl('invite-players-status-modal.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function (modal) {
+            $scope.invitedPlayersModal = modal;
+
+        });
+
+
+        $scope.openModal = function () {
+            $scope.modal.show();
+        };
+
+
+        $scope.openInvitedPlayersStatusModal = function(){
+            $scope.invitedPlayersModal.show();
+        }
+
+        $scope.closeModal = function () {
+            $scope.modal.hide();
+        };
+        //Cleanup the modal when we're done with it!
+        $scope.$on('$destroy', function () {
+            $scope.modal.remove();
+        });
+
+
+        $scope.openPopover = function($event) {
+            $scope.popover.show($event);
+        };
+        $scope.closePopover = function() {
+            $scope.popover.hide();
+        };
+        //Cleanup the popover when we're done with it!
+        $scope.$on('$destroy', function() {
+            $scope.popover.remove();
+        });
+        // Execute action on hide popover
+        $scope.$on('popover.hidden', function() {
+            // Execute action
+        });
+        // Execute action on remove popover
+        $scope.$on('popover.removed', function() {
+            // Execute action
+        });
+
+
+
 
         $scope.playersInTable = [
             {
@@ -443,6 +509,8 @@ angular.module('starter.controllers', [])
             $scope.currentPlayerStats = $scope.game.players[$scope.key];
             $scope.games.$save(game);
         }
+
+
 
         $scope.addMeToThisGame = function (game) {
             if (game.players == undefined) {
@@ -538,31 +606,12 @@ angular.module('starter.controllers', [])
             });
 
 
-        $ionicModal.fromTemplateUrl('player_stuff.html', {
-            scope: $scope,
-            animation: 'slide-in-up'
-        }).then(function (modal) {
-            $scope.modal = modal;
 
-        });
-
-
-        $scope.openModal = function () {
-            $scope.modal.show();
-        };
-
-        $scope.closeModal = function () {
-            $scope.modal.hide();
-        };
-        //Cleanup the modal when we're done with it!
-        $scope.$on('$destroy', function () {
-            $scope.modal.remove();
-        });
 
 
     })
 
-    .controller('GamesCtrl', function ($rootScope, $scope, $firebaseArray, $ionicModal, $rootScope, $cordovaDatePicker, $http, Notifications, Groups) {
+    .controller('GamesCtrl', function ($rootScope, $scope, $firebaseArray, $ionicModal, $rootScope, $cordovaDatePicker, $http, Notifications, Groups , $cordovaDialogs) {
 
         Groups.getGroups().then(function (data) {
             $scope.groups = data;
@@ -575,6 +624,13 @@ angular.module('starter.controllers', [])
                 }
             });
         });
+
+        $cordovaDialogs.confirm('message', 'title', ['button 1','button 2'])
+            .then(function(buttonIndex) {
+                // no button = 0, 'OK' = 1, 'Cancel' = 2
+                var btnIndex = buttonIndex;
+                console.log(btnIndex);
+            });
 
 
         var dateOptions = {
@@ -696,6 +752,18 @@ angular.module('starter.controllers', [])
                 }
             }
         };
+
+
+        $scope.removePlayerFromGame = function(game){
+
+
+            for (var key in game.players) {
+                if (key == $rootScope.currentPlayer.$id) {
+                   delete game.players[key];
+                   $scope.games.$save(game);
+                }
+            }
+        }
 
         $scope.trashGame = function (game) {
             for (var key in game.players) {
