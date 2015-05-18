@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0EC6D951D6CD4A67B05D364B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1003906E908D43669C273632 /* SystemConfiguration.framework */; };
 		10FD04AD745442EDA0C51E88 /* OneSignalJailbreakDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B52BC48D8DD42D1898F37CB /* OneSignalJailbreakDetection.m */; };
@@ -502,7 +501,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "Bingoz/Bingoz-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					CoreFoundation,
@@ -533,7 +532,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "Bingoz/Bingoz-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					CoreFoundation,

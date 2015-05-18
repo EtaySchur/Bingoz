@@ -18,6 +18,9 @@
           <ion-option-button  ng-show="game.createdBy == currentUser.uid" ng-click="games.$remove(game)" class="button-assertive">
               <i style="padding-left: 15px;padding-right: 15px"     class="fa fa-trash-o fa-2x"></i>
           </ion-option-button>
+          <ion-option-button  ng-show="showJoinGameButton(game)" ng-click="removePlayerFromGame(game)" class="button-assertive">
+              <i style="padding-left: 15px;padding-right: 15px"     class="fa fa-times fa-2x"></i>
+          </ion-option-button>
           <ion-option-button  ng-click="addMe(game)"  ng-show="showJoinGameButton(game)"  class="button-positive">
               <i      style="padding-left: 15px;padding-right: 15px"   class="fa fa-plus-circle fa-2x"></i>
           </ion-option-button>

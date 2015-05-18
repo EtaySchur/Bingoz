@@ -1,0 +1,174 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Game Info">
+    <ion-nav-buttons side="right">
+        <button ng-show="game.players[currentPlayer.$id].attendToCome" class="button" ng-click="openPopover($event)">
+            <i class="icon ion-android-arrow-dropdown-circle"></i>
+        </button>
+        <button ng-hide="game.players[currentPlayer.$id].attendToCome" class="button" ng-click="addMeToThisGame(game)">
+            <i class="icon ion-chevron-right ion-ios-plus-outline"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+
+        <div class="list">
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-ios-location"></i>
+                {{game.location}}
+            </a>
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-ios-calendar"></i>
+                {{convertTimeStampToDate(game.date)}}
+            </a>
+        </div>
+        <div class="list">
+            <div ng-show="player.attendToCome" ng-repeat="(myKey, player) in game.players"  class="item item-thumbnail-left">
+                <img ng-src="data:image/jpeg;base64,{{playersKeyArray[myKey].image.image}}" style="width: 64px; height: 64px">
+                <div ng-class="{'range-positive' : player.chanceToCome > 30 && player.chanceToCome <= 70 , 'range-danger': player.chanceToCome <= 30 , 'range-balanced': player.chanceToCome > 70 && player.chanceToCome <= 100 }" class="item range">
+                    <input readonly ng-change="games.$save(game)" ng-model="player.chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{player.chanceToCome}}">
+                </div>
+                <div style="padding-top:5px">
+                    <i ng-show="player.beer == true" class="fa fa-beer"></i>
+                    <i ng-show="player.car == true" class="fa fa-car"></i>
+                    <i ng-show="player.boffe == true" class="fa fa-bolt"></i>
+                    <i ng-show="player.food == true" class="fa fa-cutlery"></i>
+                    <i ng-show="player.coffee == true" class="fa fa-coffee"></i>
+                    <i ng-show="player.fire == true" class="fa fa-fire"></i>
+                    <i ng-show="player.benny == true" class="fa fa-fighter-jet"></i>
+                    <i ng-show="player.cash == true" class="fa fa-money"></i>
+                    <i style="color: green" ng-show="player.weed == true" class="fa fa-leaf"></i>
+                    <i ng-show="player.suitcase == true" class="fa fa-suitcase"></i>
+                    <i  ng-show="player.gift == true" class="fa fa-gift"></i>
+                    <i ng-show="player.birthday == true" class="fa fa-birthday-cake"></i>
+                    <i ng-show="player.manch == true" class="fa fa-shopping-cart"></i>
+                    <i ng-show="player.credit_card == true" class="icon ion-card"></i>
+                    <i ng-show="player.drinks == true" class="fa fa-glass"></i>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
+<script id="player_stuff.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Bingo Game Settings</h1>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list list-inset">
+                <div class="item item-divider">
+                    Change To Come
+                </div>
+                <div ng-class="{'range-positive' : currentPlayerStats.chanceToCome > 30 && currentPlayerStats.chanceToCome <= 70 ,
+                                'range-assertive': currentPlayerStats.chanceToCome <= 30 ,
+                                'range-balanced': currentPlayerStats.chanceToCome > 70 && currentPlayerStats.chanceToCome <= 100 }"
+                     class="item range">
+                    <i class="icon ion-ios7-sunny-outline"></i>
+                    <input  ng-change="saveMe(game)" ng-model="game.players[key].chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{game.players[key].chanceToCome}}">
+                    <i class="icon ion-ios7-sunny"></i>
+                </div>
+                <div class="item item-divider">
+                    Things To Bring With Me
+                </div>
+                <ul class="list">
+
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].suitcase">Suitcase<i  style="float: right" class="fa fa-suitcase fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].gift">Surprise<i  style="float: right" class="fa fa-gift fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].birthday">Birthday<i  style="float: right" class="fa fa-birthday-cake fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].manch">Snacks<i  style="float: right" class="fa fa-shopping-cart fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].cash">Cash<i  style="float: right" class="fa fa-money fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].benny">Benny <i  style="float: right" class="fa fa-fighter-jet fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].weed">Yerek<i  style="float: right;color: green" class="fa fa-leaf fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].beer">Beer  <i  style="float: right" class="fa fa-beer fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].car">Car <i  style="float: right" class="fa fa-car fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].boffe">Boffeut <i  style="float: right" class="fa fa-bolt fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].coffee">Coffee <i  style="float: right" class="fa fa-coffee fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].fire">Fire <i  style="float: right" class="fa fa-fire fa-2x"></i></ion-checkbox>
+                    </li>
+                    <li>
+                        <ion-checkbox ng-change="games.$save(game)" ng-model="game.players[key].drinks">Soft Drinks <i  style="float: right" class="fa fa-glass fa-2x"></i></ion-checkbox>
+                    </li>
+
+
+
+
+
+                </ul>
+            </div>
+        </ion-content>
+        <ion-footer-bar align-title="left" class="bar-assertive">
+
+            <h1 ng-click="closeModal()" class="title">Close</h1>
+
+        </ion-footer-bar>
+    </ion-modal-view>
+</script>
+
+
+
+<script id="game-action-popover.html" type="text/ng-template">
+    <ion-popover-view>
+
+        <ion-content>
+            <button style="margin-left: 10px" ng-show="game.players[currentPlayer.$id].attendToCome" class="button" ng-click="openModal($event)">
+                <i class="ion-chevron-right icon ion-funnel"></i>
+            </button>
+            <button style="margin-left: 10px" ng-show="game.players[currentPlayer.$id].attendToCome" class="button" ng-click="openInvitedPlayersStatusModal($event)">
+                <i class="ion-chevron-right icon ion-eye"></i>
+            </button>
+        </ion-content>
+    </ion-popover-view>
+</script>
+
+
+<script id="invite-players-status-modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Invited Players Status</h1>
+            <button ng-click="invitedPlayersModal.hide()" class="button">
+                <i  class="ion-chevron-right icon ion-close-round"></i>
+            </button>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <div  ng-repeat="(myKey, player) in game.players | orderObjectBy:'chanceToCome':true"  class="item item-thumbnail-left">
+                    <img ng-src="data:image/jpeg;base64,{{playersKeyArray[myKey].image.image}}" style="width: 64px; height: 64px">
+                    <div ng-class="{'range-positive' : player.chanceToCome > 30 && player.chanceToCome <= 70 , 'range-danger': player.chanceToCome <= 30 , 'range-balanced': player.chanceToCome > 70 && player.chanceToCome <= 100 }" class="item range">
+                        <input readonly ng-change="games.$save(game)" ng-model="player.chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{player.chanceToCome}}">
+                    </div>
+                    <p> {{player.chanceToCome}}</p>
+                </div>
+            </div>
+        </ion-content>
+        <ion-footer-bar align-title="left" class="bar-positive">
+            <h1 ng-click="addNewGroup(newGroup)" class="title">Add Group</h1>
+        </ion-footer-bar>
+    </ion-modal-view>
+</script>
