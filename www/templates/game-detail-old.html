@@ -4,7 +4,7 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="Game Info">
+<ion-view view-title="{{game.name}}">
     <ion-nav-buttons side="right">
         <button ng-show="game.players[currentPlayer.$id].attendToCome" class="button" ng-click="openPopover($event)">
             <i class="icon ion-android-arrow-dropdown-circle"></i>
@@ -158,17 +158,18 @@
         </ion-header-bar>
         <ion-content>
             <div class="list">
-                <div  ng-repeat="(myKey, player) in game.players | orderObjectBy:'chanceToCome':true"  class="item item-thumbnail-left">
+
+                <div  ng-hide="player.chanceToCome == 100" ng-repeat="(myKey, player) in game.players | orderObjectBy:'chanceToCome':true"  class="item item-thumbnail-left">
                     <img ng-src="data:image/jpeg;base64,{{playersKeyArray[myKey].image.image}}" style="width: 64px; height: 64px">
-                    <div ng-class="{'range-positive' : player.chanceToCome > 30 && player.chanceToCome <= 70 , 'range-danger': player.chanceToCome <= 30 , 'range-balanced': player.chanceToCome > 70 && player.chanceToCome <= 100 }" class="item range">
+                    <a ng-show="player.chanceToCome == 0" class="item item-icon-left">
+                        <i class="ion-chevron-right icon  ion-ios-help"></i>
+                    </a>
+                    <div  ng-show="player.chanceToCome != 0" ng-class="{'range-positive' : player.chanceToCome > 30 && player.chanceToCome <= 70 , 'range-danger': player.chanceToCome <= 30 , 'range-balanced': player.chanceToCome > 70 && player.chanceToCome <= 100 }" class="item range">
                         <input readonly ng-change="games.$save(game)" ng-model="player.chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{player.chanceToCome}}">
                     </div>
-                    <p> {{player.chanceToCome}}</p>
+
                 </div>
             </div>
         </ion-content>
-        <ion-footer-bar align-title="left" class="bar-positive">
-            <h1 ng-click="addNewGroup(newGroup)" class="title">Add Group</h1>
-        </ion-footer-bar>
     </ion-modal-view>
 </script>
