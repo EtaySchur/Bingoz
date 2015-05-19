@@ -89,6 +89,7 @@
 		.controller('MainController', function($scope , $rootScope , $firebaseArray , $cordovaFacebook, $ionicPlatform,Auth) {
 			$rootScope.authUser = Auth;
   			$rootScope.currentUser = $rootScope.authUser.$getAuth();
+
   			console.log($rootScope.authUser.$getAuth());
 			var ref = new Firebase("https://bingoz.firebaseio.com/players");
 			$rootScope.players = $firebaseArray(ref);
@@ -444,6 +445,9 @@
 			}
 
 			$scope.addNewGame = function (){
+
+
+
 				var usersObjectsList = {};
 				$scope.invitedPlayersList.forEach(function(playerId){
 					usersObjectsList[playerId] = {

@@ -1,6 +1,7 @@
 angular.module('starter.controllers', [])
 
     .controller('SignInCtrl', function ($scope, $state, $rootScope) {
+
         $scope.signIn = function (user) {
             $scope.showSpinner = true;
             $rootScope.authUser.$authWithPassword({
@@ -9,6 +10,7 @@ angular.module('starter.controllers', [])
             }).then(function (authData) {
                 $scope.showSpinner = false;
                 console.log("Logged in as:", $rootScope.authUser);
+                $rootScope.currentUser = authData;
                 $state.go("tab.dash");
             }).catch(function (error) {
                 $scope.showSpinner = false;
@@ -99,10 +101,31 @@ angular.module('starter.controllers', [])
         $rootScope.authUser = Auth;
         $rootScope.currentUser = $rootScope.authUser.$getAuth();
         console.log($rootScope.authUser.$getAuth());
-        var ref = new Firebase("https://bingoz.firebaseio.com/players");
-        $rootScope.players = $firebaseArray(ref);
+
         $rootScope.playersKeyArray = {};
 
+
+        $rootScope.$watch('currentUser' , function(){
+            console.log("FIRE ROOT SCOPE WATCH");
+            console.log($rootScope.currentUser);
+            if($rootScope.currentUser != null){
+                var ref = new Firebase("https://bingoz.firebaseio.com/players");
+                $rootScope.players = $firebaseArray(ref);
+                $rootScope.players.$loaded()
+                    .then(function () {
+                        $rootScope.players.forEach(function (player) {
+                            $rootScope.playersKeyArray[player.$id] = player;
+                            if (player.$id == $rootScope.currentUser.uid) {
+                                $rootScope.currentPlayer = player;
+
+                            }
+                        });
+                    })
+                    .catch(function (err) {
+                        console.error(err);
+                    });
+            }
+        });
 
         $rootScope.convertTimeStampToDate = function (timestamp) {
             var d = new Date(timestamp);
@@ -157,19 +180,7 @@ angular.module('starter.controllers', [])
 
         // this waits for the data to load and then logs the output. Therefore,
         // data from the server will now appear in the logged output. Use this with care!
-        $rootScope.players.$loaded()
-            .then(function () {
-                $rootScope.players.forEach(function (player) {
-                    $rootScope.playersKeyArray[player.$id] = player;
-                    if (player.$id == $rootScope.currentUser.uid) {
-                        $rootScope.currentPlayer = player;
 
-                    }
-                });
-            })
-            .catch(function (err) {
-                console.error(err);
-            });
 
     })
 
@@ -257,6 +268,17 @@ angular.module('starter.controllers', [])
         });
 
         $scope.addNewGroup = function (newGroup) {
+            if(newGroup == undefined || newGroup.name == undefined || newGroup.name.length < 1){
+                $scope.groupNameReqError = true;
+                return;
+            }else{
+                $scope.groupNameReqError = false;
+               $scope.closeModal();
+            }
+            if($scope.newGroup.description == undefined){
+                $scope.newGroup.description = '';
+            }
+
             var date = new Date().getTime();
             $scope.groups.$add({
                 name: $scope.newGroup.name,

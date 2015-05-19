@@ -13,14 +13,14 @@
           </label>
         </div>
         <div class="padding">
-          <button class="button button-block button-balanced" ng-click="signIn(user)">
+          <button ng-disabled="!signInForm.$valid" class="button button-block button-balanced" ng-click="signIn(user)">
             Sign In
           </button>
         </div>
         <div class="padding item app-gery-bg">
-          <button class="button button-block button-positive ion-social-facebook" ng-click="signInWithFB()">
+          <!--button class="button button-block button-positive ion-social-facebook" ng-click="signInWithFB()">
             Login With Facebook
-          </button>
+          </button-->
             <a ui-sref="signup" class="form-link">sign up</a>
         </div>
       </form> 

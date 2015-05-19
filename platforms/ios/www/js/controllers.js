@@ -99,9 +99,12 @@ angular.module('starter.controllers', [])
         $rootScope.authUser = Auth;
         $rootScope.currentUser = $rootScope.authUser.$getAuth();
         console.log($rootScope.authUser.$getAuth());
+
         var ref = new Firebase("https://bingoz.firebaseio.com/players");
         $rootScope.players = $firebaseArray(ref);
         $rootScope.playersKeyArray = {};
+
+        
 
 
         $rootScope.convertTimeStampToDate = function (timestamp) {
@@ -634,7 +637,6 @@ angular.module('starter.controllers', [])
                     if(buttonIndex == 1){
                         $scope.games.$remove(game)
                     }
-
                     if(buttonIndex == 2){
 
                     }

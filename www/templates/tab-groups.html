@@ -33,6 +33,7 @@
                 <label class="item item-input">
                     <span class="input-label">Group Name</span>
                     <input ng-change="updateGroupName(newGroup.name)" ng-model="newGroup.name" type="text">
+                    <p ng-if="groupNameReqError" class="errorText">You Must Enter Group Name </p>
                 </label>
                 <label class="item item-input">
                     <span class="input-label">Group Description</span>
@@ -41,9 +42,7 @@
             </div>
         </ion-content>
         <ion-footer-bar align-title="left" class="bar-positive">
-
-            <h1 ng-click="addNewGroup(newGroup)" class="title">Add Group</h1>
-
+            <h1 ng-click="addNewGroup(newGroup)"  class="title">Add Group</h1>
         </ion-footer-bar>
     </ion-modal-view>
     </script>

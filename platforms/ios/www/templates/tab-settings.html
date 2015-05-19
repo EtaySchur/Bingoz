@@ -4,14 +4,15 @@
 <div id="content">
   <div class="profile-bg"></div>
   <div id="profile-info">
-      <img id="profile-image" ng-src="img/defulte_avatar.jpg">
+      <img ng-if="currentPlayer.image == undefined" id="profile-image" ng-src="img/defulte_avatar.jpg">
+      <img ng-if="currentPlayer.image.image.length > 0" id="profile-image" ng-src="data:image/jpeg;base64,{{currentPlayer.image.image}}">
       <h3 id="profile-name">{{currentPlayer.nickName}}</h3>
   </div>
 </div>
     <div class="list card">
 
         <div class="item item-avatar">
-            <img ng-src="data:image/jpeg;base64,{{currentPlayer.image.image}}" style="width: 64px; height: 64px">
+            <img ng-if="currentPlayer.image.image.length > 0" ng-src="data:image/jpeg;base64,{{currentPlayer.image.image}}" style="width: 64px; height: 64px">
             <h2>{{currentPlayer.name}}</h2>
         </div>
         <a ng-click="upload()" class="item item-icon-left positive" href="#">

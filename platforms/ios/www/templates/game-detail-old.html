@@ -27,7 +27,8 @@
         </div>
         <div class="list">
             <div ng-show="player.attendToCome" ng-repeat="(myKey, player) in game.players"  class="item item-thumbnail-left">
-                <img ng-src="data:image/jpeg;base64,{{playersKeyArray[myKey].image.image}}" style="width: 64px; height: 64px">
+                <img style="margin: 0" ng-if="playersKeyArray[myKey].image == undefined" id="profile-image" ng-src="img/defulte_avatar.jpg">
+                <img ng-if="playersKeyArray[myKey].image.image.length > 0" ng-src="data:image/jpeg;base64,{{playersKeyArray[myKey].image.image}}" style="width: 64px; height: 64px">
                 <div ng-class="{'range-positive' : player.chanceToCome > 30 && player.chanceToCome <= 70 , 'range-danger': player.chanceToCome <= 30 , 'range-balanced': player.chanceToCome > 70 && player.chanceToCome <= 100 }" class="item range">
                     <input readonly ng-change="games.$save(game)" ng-model="player.chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{player.chanceToCome}}">
                 </div>
@@ -61,7 +62,7 @@
         <ion-content>
             <div class="list list-inset">
                 <div class="item item-divider">
-                    Change To Come
+                    Chance To Come
                 </div>
                 <div ng-class="{'range-positive' : currentPlayerStats.chanceToCome > 30 && currentPlayerStats.chanceToCome <= 70 ,
                                 'range-assertive': currentPlayerStats.chanceToCome <= 30 ,
