@@ -102,6 +102,42 @@ angular.module('starter.services', [])
                         // or server returns response with an error status.
                     });
             },
+            sendPlayerIsFullyAttendToCome:function(invitedPlayers , user , game , numOfAvailablePlaces ){
+                var invitedPlayersIds = getUsersNotificationsIds(invitedPlayers);
+                var string = '';
+                if(numOfAvailablePlaces == 2){
+                    var string = " , Only 2 Sits Left , Hurry Up .. "
+                }
+
+                if(numOfAvailablePlaces == 1){
+                    var string = " , Only 1 Sit Left !!!  Hurry Up !!  "
+                }
+
+
+                var data = {
+                    "app_id": appId,
+                    "include_player_ids": invitedPlayersIds,
+                    "isAndroid": true,
+                    "isIos": true,
+                    "ios_badgeType": "Increase",
+                    "ios_badgeCount": 1,
+                    "contents": {"en": user.nickName + ' Has Joined The Game '+game.name+string+' !'}
+                }
+
+                $http.post('https://onesignal.com/api/v1/notifications', data).
+                    success(function (data, status, headers, config) {
+                        // this callback will be called asynchronously
+                        // when the response is available
+                        console.log("Success");
+                        console.log(data);
+                        console.log(status);
+                    }).
+                    error(function (data, status, headers, config) {
+                        // called asynchronously if an error occurs
+                        // or server returns response with an error status.
+                    });
+
+            },
             sendGroupInviteNotification: function (groupName, invitedPlayersIds, createdByUser) {
 
                 var data = {
@@ -129,8 +165,7 @@ angular.module('starter.services', [])
             },
             playerJoinGameNotification: function (currentUser, invitedPlayers) {
                 var invitedPlayersIds = getUsersNotificationsIds(invitedPlayers);
-                console.log("INvite");
-                console.log(invitedPlayersIds);
+
                 var data = {
                     "app_id": appId,
                     "include_player_ids": invitedPlayersIds,

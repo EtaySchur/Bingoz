@@ -104,6 +104,21 @@ angular.module('starter.controllers', [])
 
         $rootScope.playersKeyArray = {};
 
+        $rootScope.checkMe = function (game) {
+
+
+            if (game.players != undefined) {
+                var numOfPlayers = 0;
+                for (var key in game.players) {
+                    if (game.players[key].chanceToCome == 100) {
+                        numOfPlayers++;
+                    }
+                }
+                return numOfPlayers;
+            }
+
+
+        }
 
         $rootScope.$watch('currentUser' , function(){
             console.log("FIRE ROOT SCOPE WATCH");
@@ -527,7 +542,12 @@ angular.module('starter.controllers', [])
             // }
         ];
 
-        $scope.saveMe = function (game) {
+        $scope.saveMe = function (game , chanceToCome) {
+            if(chanceToCome == 100){
+                var numOfAvailablePlaces = game.maxPlayers - $rootScope.checkMe(game);
+
+                Notifications.sendPlayerIsFullyAttendToCome(game.players , $rootScope.currentPlayer , game , numOfAvailablePlaces )
+            }
             $scope.currentPlayerStats = $scope.game.players[$scope.key];
             $scope.games.$save(game);
         }
@@ -648,7 +668,7 @@ angular.module('starter.controllers', [])
         });
 
 
-        $scope.openDeleteDialog = function (){
+        $scope.openDeleteDialog = function (game){
 
             $cordovaDialogs.confirm('Are You Sure ?', 'Delete Game', ['Yes','Cancel'])
                 .then(function(buttonIndex) {
@@ -700,13 +720,7 @@ angular.module('starter.controllers', [])
         // add new items to the array
         // the message is automatically added to Firebase!
 
-        $scope.checkMe = function (game) {
-            if (game.players != undefined) {
-                return (Object.keys(game.players).length);
-            }
 
-
-        }
 
         $scope.addNewGame = function () {
             var usersObjectsList = {};

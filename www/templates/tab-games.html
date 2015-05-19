@@ -9,13 +9,13 @@
                   <p>{{game.location}}</p>
                   <p>{{convertTimeStampToDate(game.date)}}</p>
               </div>
-              <!--div class="col">{{checkMe(game)}}/{{game.maxPlayers}}
+              <div class="col">{{checkMe(game)}}/{{game.maxPlayers}}
                   <i class="fa fa-users"></i>
-              </div-->
+              </div>
           </div>
           <i class="icon ion-chevron-right icon-accessory"></i>
 
-          <ion-option-button  ng-show="game.createdBy == currentUser.uid" ng-click="openDeleteDialog()" class="button-assertive">
+          <ion-option-button  ng-show="game.createdBy == currentUser.uid" ng-click="openDeleteDialog(game)" class="button-assertive">
               <i style="padding-left: 15px;padding-right: 15px"     class="fa fa-trash-o fa-2x"></i>
           </ion-option-button>
           <ion-option-button  ng-show="showJoinGameButton(game)" ng-click="removePlayerFromGame(game)" class="button-assertive">

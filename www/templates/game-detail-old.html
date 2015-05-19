@@ -26,7 +26,7 @@
             </a>
         </div>
         <div class="list">
-            <div ng-show="player.attendToCome" ng-repeat="(myKey, player) in game.players"  class="item item-thumbnail-left">
+            <div ng-show="player.chanceToCome == 100" ng-repeat="(myKey, player) in game.players"  class="item item-thumbnail-left">
                 <img style="margin: 0" ng-if="playersKeyArray[myKey].image == undefined" id="profile-image" ng-src="img/defulte_avatar.jpg">
                 <img ng-if="playersKeyArray[myKey].image.image.length > 0" ng-src="data:image/jpeg;base64,{{playersKeyArray[myKey].image.image}}" style="width: 64px; height: 64px">
                 <div ng-class="{'range-positive' : player.chanceToCome > 30 && player.chanceToCome <= 70 , 'range-danger': player.chanceToCome <= 30 , 'range-balanced': player.chanceToCome > 70 && player.chanceToCome <= 100 }" class="item range">
@@ -69,7 +69,7 @@
                                 'range-balanced': currentPlayerStats.chanceToCome > 70 && currentPlayerStats.chanceToCome <= 100 }"
                      class="item range">
                     <i class="icon ion-ios7-sunny-outline"></i>
-                    <input  ng-change="saveMe(game)" ng-model="game.players[key].chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{game.players[key].chanceToCome}}">
+                    <input  ng-change="saveMe(game , game.players[key].chanceToCome)" ng-model="game.players[key].chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{game.players[key].chanceToCome}}">
                     <i class="icon ion-ios7-sunny"></i>
                 </div>
                 <div class="item item-divider">
@@ -160,13 +160,13 @@
         <ion-content>
             <div class="list">
 
-                <div  ng-hide="player.chanceToCome == 100" ng-repeat="(myKey, player) in game.players | orderObjectBy:'chanceToCome':true"  class="item item-thumbnail-left">
-                    <img ng-src="data:image/jpeg;base64,{{playersKeyArray[myKey].image.image}}" style="width: 64px; height: 64px">
+                <div  ng-hide="player.chanceToCome == 100" ng-repeat="(playerKey, player) in game.players | orderObjectBy:'chanceToCome':true"  class="item item-thumbnail-left">
+                    <img ng-src="data:image/jpeg;base64,{{playersKeyArray[playerKey].image.image}}" style="width: 64px; height: 64px">
                     <a ng-show="player.chanceToCome == 0" class="item item-icon-left">
                         <i class="ion-chevron-right icon  ion-ios-help"></i>
                     </a>
                     <div  ng-show="player.chanceToCome != 0" ng-class="{'range-positive' : player.chanceToCome > 30 && player.chanceToCome <= 70 , 'range-danger': player.chanceToCome <= 30 , 'range-balanced': player.chanceToCome > 70 && player.chanceToCome <= 100 }" class="item range">
-                        <input readonly ng-change="games.$save(game)" ng-model="player.chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{player.chanceToCome}}">
+                        <input readonly  ng-model="player.chanceToCome"  type="range" name="volume" min="0" max="100" ng-value="{{player.chanceToCome}}">
                     </div>
 
                 </div>
