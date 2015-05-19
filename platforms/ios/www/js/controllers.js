@@ -625,12 +625,22 @@ angular.module('starter.controllers', [])
             });
         });
 
-        $cordovaDialogs.confirm('message', 'title', ['button 1','button 2'])
-            .then(function(buttonIndex) {
-                // no button = 0, 'OK' = 1, 'Cancel' = 2
-                var btnIndex = buttonIndex;
-                console.log(btnIndex);
-            });
+
+        $scope.openDeleteDialog = function (){
+
+            $cordovaDialogs.confirm('Are You Sure ?', 'Delete Game', ['Yes','Cancel'])
+                .then(function(buttonIndex) {
+                    // no button = 0, 'OK' = 1, 'Cancel' = 2
+                    if(buttonIndex == 1){
+                        $scope.games.$remove(game)
+                    }
+
+                    if(buttonIndex == 2){
+
+                    }
+                });
+        }
+
 
 
         var dateOptions = {
