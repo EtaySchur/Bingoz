@@ -304,6 +304,14 @@ angular.module('starter.controllers', [])
             });
         };
 
+        $scope.removePlayerFromGroup = function(group){
+            var index = group.players.indexOf($rootScope.currentPlayer.$id);
+            console.log(index);
+            group.players.splice( index , 1 );
+            console.log(group.players);
+            $scope.groups.$save(group);
+        }
+
         $scope.updateGroupDescription = function (groupDesc) {
             $scope.newGroup.description = groupDesc;
         }
@@ -337,6 +345,8 @@ angular.module('starter.controllers', [])
                 }
             }
         });
+
+
 
         $scope.updateMessage = function (text) {
             $scope.messageText = text;

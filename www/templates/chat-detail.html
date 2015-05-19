@@ -6,8 +6,8 @@
 -->
 <ion-view view-title="{{currentGroup.name}} - {{currentGroup.description}}">
     <ion-nav-buttons side="right">
-        <button class="button" ng-click="openModal($event)">
-            <i ng-show="currentGroup.createdBy == currentPlayer.$id" class="icon ion-android-person-add"></i>
+        <button ng-show="currentGroup.createdBy == currentPlayer.$id" class="button" ng-click="openModal($event)">
+            <i  class="icon ion-android-person-add"></i>
         </button>
     </ion-nav-buttons>
     <ion-content class="padding">
@@ -33,7 +33,7 @@
 <script id="add-group-players-modal.html" type="text/ng-template">
     <ion-modal-view>
         <ion-header-bar>
-            <h1 class="title">Add Group</h1>
+            <h1 class="title">Invited Players To Group</h1>
             <button ng-click="closeModal()" class="button">
                 <i  class="ion-chevron-right icon ion-close-round"></i>
             </button>
@@ -47,7 +47,7 @@
                         <input ng-model="query" type="text" placeholder="Search For Player Name">
                     </label>
                 </div>
-                <li ng-repeat="player in players | queryPlayer:query">
+                <li ng-show="currentGroup.players.indexOf(player.$id) == -1" ng-repeat="player in players | queryPlayer:query">
                     <ion-checkbox ng-change="updatePlayer(player , isChecked)" ng-model="isChecked">{{player.nickName}}</ion-checkbox>
                 </li>
                 <li ng-repeat="selectedPlayer in selectedPlayers">

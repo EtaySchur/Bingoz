@@ -12,8 +12,11 @@
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button ng-if="group.createdBy == currentPlayer.$id" class="button-assertive" ng-click="groups.$remove(group)">
-          Delete
+            <i style="padding-left: 15px;padding-right: 15px"     class="fa fa-trash-o fa-2x"></i>
         </ion-option-button>
+          <ion-option-button ng-if="group.createdBy != currentPlayer.$id" class="button-assertive" ng-click="removePlayerFromGroup(group)">
+              <i style="padding-left: 15px;padding-right: 15px"     class="fa fa-times fa-2x"></i>
+          </ion-option-button>
       </ion-item>
     </ion-list>
   </ion-content>
